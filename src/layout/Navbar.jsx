@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-[#1E1E1E] relative">
-      <div className="flex justify-between items-center rule py-3">
+      <div className="flex justify-between items-center rule py-3 md:py-2">
         <p className="text-[#41A94E] font-[Inter] font-semibold text-lg md:text-2xl">College Dept</p>
         {/* Hamburger Menu */}
         {isMobile && (
@@ -34,7 +34,7 @@ const Navbar = () => {
           </div>
         )}
         {/* Desktop Nav */}
-        <ul className="hidden text-white items-center justify-between font-[Open_Sans] w-1/2 py-2 md:flex lg:text-lg xl:text-xl font-[]  ">
+        <ul className="hidden text-white items-center justify-between w-1/2 py-2 md:flex lg:text-lg xl:text-xl font-[Outfit]">
           <li className="nav_link">
             <NavLink className="links" to="/">Home</NavLink>
           </li>
