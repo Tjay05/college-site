@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -52,20 +52,34 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="hidden lg:flex gap-4 text-sm md:text-[16px] font-[]">
-          <a href="" className="border border-white text-white px-3 py-1.5">Contact Us</a>
-          <a href="" className="text-[#1E1E1E] border bg-white px-3 py-1.5">Login</a>
+          <Link href="" className="border border-white text-white px-3 py-1.5">Contact Us</Link>
+          <Link href="" className="text-[#1E1E1E] border bg-white px-3 py-1.5">Login</Link>
         </div>
       </div>
       {/* Mobile Nav */}
       {isMobile && (
-        <ul className={`${toggleNav ? 'opacity-100 translate-y-0.5' : 'opacity-0 translate-y-full'} ${toggleNav ? 'z-90' : ''} transition-all duration-300 shadow-md ease-in-out absolute top-12.5 w-full bg-inherit py-2 border-white border-t flex flex-col justify-center text-white items-center font-[]`}>
-          <li><a href="/">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Academics</a></li>
-          <li><a href="">Community</a></li>
-          <li><a href="">Research & Projects</a></li>
-          <li><a href="">Contact Us</a></li>
-          <li><a href="">Login</a></li>
+        <ul className={`${toggleNav ? 'opacity-100 translate-y-0.5' : 'opacity-0 translate-y-full'} ${toggleNav ? 'z-90' : ''} transition-all duration-300 shadow-md ease-in-out absolute top-12.5 w-full bg-inherit py-2 border-white border-t flex flex-col justify-center text-white text-lg items-center font-[Outfit]`}>
+          <li className="nav_link">
+            <NavLink onClick={handleNavToggle} className="links" to="/">Home</NavLink>
+          </li>
+          <li className="nav_link">
+            <NavLink onClick={handleNavToggle} className="links" to="">About</NavLink>
+          </li>
+          <li className="nav_link">
+            <NavLink onClick={handleNavToggle} className="links" to="">Academics</NavLink>
+          </li>
+          <li className="nav_link">
+            <NavLink onClick={handleNavToggle} className="links" to="">Community</NavLink>
+          </li>
+          <li className="nav_link">
+            <NavLink onClick={handleNavToggle} className="links" to="">Research & Projects</NavLink>
+          </li>
+          <li className="nav_link m-2">
+            <Link onClick={handleNavToggle} className="border border-white text-white px-3 py-2 mb-2" to="">Contact Us</Link>
+          </li>
+          <li className="nav_link">
+            <Link onClick={handleNavToggle} className="text-[#1E1E1E] border bg-white px-7 py-2" to="">Login</Link>
+          </li>
         </ul>
       )}
     </nav>
