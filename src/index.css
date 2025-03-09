@@ -29,6 +29,10 @@
   @apply text-center flex flex-col items-center gap-2
 }
 
+.grid_icon {
+  @apply w-1/2 lg:w-[35%]
+}
+
 .grid_heading {
   @apply font-bold lg:text-xl
 }
