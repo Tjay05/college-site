@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <nav className="bg-[#1E1E1E] relative">
       <div className="flex justify-between items-center rule py-3 md:py-2">
-        <p className="text-[#41A94E] font-[Inter] font-semibold text-lg md:text-2xl">College Dept</p>
+        <p className="text-[#41A94E] font-[Inter] font-semibold text-lg md:text-2xl">College Dept.</p>
         {/* Hamburger Menu */}
         {isMobile && (
           <div 
@@ -34,7 +34,9 @@ const Navbar = () => {
           </div>
         )}
         {/* Desktop Nav */}
-        <ul className="hidden text-white items-center justify-between w-1/2 py-2 md:flex lg:text-lg xl:text-xl font-[Outfit]">
+        <ul 
+          className="hidden text-white items-center justify-between w-1/2 py-2 md:flex lg:text-lg xl:text-xl font-[Outfit]"
+        >
           <li className="nav_link">
             <NavLink className="links" to="/">Home</NavLink>
           </li>
@@ -74,10 +76,10 @@ const Navbar = () => {
           <li className="nav_link">
             <NavLink onClick={handleNavToggle} className="links" to="">Research & Projects</NavLink>
           </li>
-          <li className="nav_link m-2">
+          <li className="nav_link my-2">
             <Link onClick={handleNavToggle} className="border border-white text-white px-3 py-2 mb-2" to="">Contact Us</Link>
           </li>
-          <li className="nav_link">
+          <li className="nav_link mb-2">
             <Link onClick={handleNavToggle} className="text-[#1E1E1E] border bg-white px-7 py-2" to="">Login</Link>
           </li>
         </ul>

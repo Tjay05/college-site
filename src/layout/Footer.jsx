@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="bg-[#1E1E1E] relative">
       <div className="rule md:flex justify-between items-center text-white py-4 border-b md:py-8">
         <div className="">
-          <p className="text-[#41A94E] font-[Inter] font-semibold text-3xl md:text-5xl text-center md:text-left">College Dept</p>
+          <p className="text-[#41A94E] font-[Inter] font-semibold text-3xl md:text-5xl text-center md:text-left">College Dept.</p>
           <p className="text-center font-[Inter] text-lg my-2 md:text-left md:text-xl lg:text-xl mb-10">
             Department Overview and Academic Excellence
           </p>
