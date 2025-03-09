@@ -36,3 +36,11 @@
 .grid_texts {
   @apply text-[#333333] text-sm lg:text-base
 }
+
+.card {
+  @apply rounded-2xl overflow-hidden shadow-2xl my-8
+}
+
+.card_pic {
+  @apply h-[200px] w-full object-cover lg:h-[250px]
+}
