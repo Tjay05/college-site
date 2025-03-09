@@ -1,6 +1,8 @@
 import lapGuy from '../../assets/images/laptop-guy.png';
 import Bg1_tl from '../../assets/images/green-bg1tl.png';
 import Bg1br from '../../assets/images/green-bg1br.png';
+import Bg2_tl from '../../assets/images/bg2-tl.png';
+import Bg2br from '../../assets/images/bg2-br.png';
 import NewsPaper from '../../assets/images/newspaper-girl.png';
 import Afro_Guy from '../../assets/images/afro-guy.png';
 import Curriculum from '../../assets/icons/structured-curriculum.svg';
@@ -71,6 +73,23 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </section>
+      <section 
+        className="bg-[#41A94E] rule p-5 relative rounded-4xl my-12 lg:mt-48 lg:py-10 lg:px-18 lg:flex items-center justify-start"
+        style={{ 
+          backgroundImage: `url(${Bg2_tl}), url(${Bg2br})`,
+          backgroundPosition: "top left, bottom right",
+          backgroundRepeat: "no-repeat no-repeat",
+          backgroundSize: '17%, 17%'
+        }}
+      >
+        <div className="text-white font-[Inter] text-center z-10 lg:text-left lg:w-[45%]">
+          <p className="text-sm font-medium mb-2 opacity-80 md:text-lg lg:text-xl lg:mb-4">Maximize your academic potential with us</p>
+          <h2 className="text-3xl font-extrabold my-2 md:text-4xl lg:text-5xl lg:my-4">Tailored programs for personal and  professional growth</h2>
+          <p className="text-sm font-semibold opacity-80 md:text-lg  lg:text-xl">Engage with a community that prioritizes collaboration and knowledge-sharing</p>
+          <button className="bg-[#333333] rounded-4xl self-center px-5 text-lg font-semibold my-4 py-3 cursor-pointer lg:mt-8 lg:text-xl">Begin your Journey with us</button>
+        </div>
+        <img src={Afro_Guy} alt="Afro Guy" className='hidden lg:block lg:absolute right-[-60px] w-[67%] bottom-0 h-auto object-cover' />
       </section>
     </div>
   );
