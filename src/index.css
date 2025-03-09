@@ -20,3 +20,19 @@
 .links.active {
   @apply opacity-100
 }
+
+.heading {
+  @apply font-extrabold text-3xl lg:text-6xl
+}
+
+.grid_items {
+  @apply text-center flex flex-col items-center gap-2
+}
+
+.grid_heading {
+  @apply font-bold lg:text-xl
+}
+
+.grid_texts {
+  @apply text-[#333333] text-sm lg:text-base
+}
