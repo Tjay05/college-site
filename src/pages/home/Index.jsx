@@ -5,6 +5,7 @@ import Bg2_tl from '../../assets/images/bg2-tl.png';
 import Bg2br from '../../assets/images/bg2-br.png';
 import NewsPaper from '../../assets/images/newspaper-girl.png';
 import Afro_Guy from '../../assets/images/afro-guy.png';
+import ResourceGroup from '../../assets/images/resources-group.png';
 import Curriculum from '../../assets/icons/structured-curriculum.svg';
 import Faculty from '../../assets/icons/dedicated-support.svg';
 import Community from '../../assets/icons/engaging-community.svg';
@@ -90,6 +91,36 @@ const Home = () => {
           <button className="bg-[#333333] rounded-4xl self-center px-5 text-lg font-semibold my-4 py-3 cursor-pointer lg:mt-8 lg:text-xl">Begin your Journey with us</button>
         </div>
         <img src={Afro_Guy} alt="Afro Guy" className='hidden lg:block lg:absolute right-[-60px] w-[67%] bottom-0 h-auto object-cover' />
+      </section>
+      <section className="bg-[#41A94E] relative my-16 py-8 lg:pb-58 lg:mb-98">
+        <div className="rule text-white font-[Inter] text-center lg:text-left relative">
+          <p className="font-semibold text-lg opacity-75 lg:text-2xl lg:mb-4">Our Work</p>
+          <h2 className='font-extrabold text-3xl lg:text-5xl'>Empowering Academic Excellence</h2>
+          <p className="font-medium text-lg opacity-75 my-4 lg:text-2xl lg:w-[75%] lg:opacity-100">Explore exceptional resources dedicated to enhancing your academic journey within our college department.</p>
+          <div className="lg:grid grid-cols-1 gap-24 lg:grid-cols-3 lg:absolute bottom-[-530px]">
+            <div className="card">
+              <img src={ResourceGroup} alt="Resources Group" className='card_pic' />
+              <div className="p-4 bg-white text-left h-full">
+                <h3 className="font-bold text-black text-lg lg:text-2xl">Comprehensive Academic Resources</h3>
+                <p className="text-[#00000080] lg:text-lg">Access a wealth of curated materials designed for both lecturers and students.</p>
+              </div>
+            </div>
+            <div className="card">
+              <img src={ResourceGroup} alt="Resources Group" className='card_pic' />
+              <div className="p-4 bg-white text-left h-full">
+                <h3 className="font-bold text-black text-lg lg:text-2xl">Engaging Community Forums</h3>
+                <p className="text-[#00000080] lg:text-lg">Share knowledge and collaborate with peers in discussion forums tailored for academic and career advancements</p>
+              </div>
+            </div>
+            <div className="card">
+              <img src={ResourceGroup} alt="Resources Group" className='card_pic' />
+              <div className="p-4 bg-white text-left h-full">
+                <h3 className="font-bold text-black text-lg lg:text-2xl">Dynamic Learning Environment</h3>
+                <p className="text-[#00000080] lg:text-lg">Stay informed with real-time updates on department news and events that celebrate your achievements.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
