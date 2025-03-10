@@ -48,3 +48,11 @@
 .card_pic {
   @apply h-[200px] w-full object-cover lg:h-[250px]
 }
+
+.contact_label {
+  @apply mb-1 font-semibold lg:text-xl
+}
+
+.contact_input_field {
+  @apply border-b border-[#33333333] text-sm lg:text-base px-2 font-[Inter]
+}
