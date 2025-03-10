@@ -15,6 +15,9 @@ import Community from '../../assets/icons/engaging-community.svg';
 import Resources from '../../assets/icons/comprehensive-resources.svg';
 import Updated from '../../assets/icons/stay-updated.svg';
 import Experience from '../../assets/icons/transformative-experience.svg';
+import map_Pointer from '../../assets/icons/location.svg';
+import mail_icon from '../../assets/icons/email.svg';
+import phone_icon from '../../assets/icons/call.svg';
 
 const Home = () => {
   return (
@@ -79,7 +82,7 @@ const Home = () => {
         </div>
       </section>
       <section 
-        className="bg-[#41A94E] rule p-5 relative rounded-4xl my-12 lg:mt-48 lg:py-10 lg:px-18 lg:flex items-center justify-start"
+        className="bg-[#41A94E] rule p-5 relative rounded-4xl my-12 lg:mt-54 lg:py-10 lg:px-18 lg:flex items-center justify-start"
         style={{ 
           backgroundImage: `url(${Bg2_tl}), url(${Bg2br})`,
           backgroundPosition: "top left, bottom right",
@@ -146,6 +149,58 @@ const Home = () => {
             <p className="font-medium my-4 lg:text-lg">- Shammah Goshit, <span className="font-bold">Student</span></p>
           </div>
         </div>
+      </section>
+      <section className="rule font-[Inter] border border-black p-6 my-16 rounded-4xl bg-white md:flex items-stretch md:my-28 md:p-8 md:gap-8">
+        <div className="bg-[#41A94E] text-white p-5 rounded-2xl mb-4 md:w-[40%]">
+          <p className="uppercase font-semibold text-lg md:text-xl">Connect with us</p>
+          <h2 className="font-bold my-2 text-xl md:text-2xl lg:text-4xl">Experience the Full Potential of Our College Department</h2>
+          <div className="my-6 w-full flex flex-col gap-2 md:gap-3">
+            <div className="flex items-center gap-3">
+              <img src={map_Pointer} alt="Location" className="w-[35px] md:w-11" />
+              <div className="">
+                <p className="font-bold md:text-lg lg:text-xl">Our Office</p>
+                <p className="text-xs md:text-sm lg:text-base">Jos, Plateau State</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <img src={mail_icon} alt="email" className="w-[35px] md:w-11" />
+              <div className="">
+                <p className="font-bold md:text-lg lg:text-xl">Contact Us Via Email</p>
+                <p className="text-xs md:text-sm lg:text-base">Tosinolacollege@gmail.com</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <img src={phone_icon} alt="Phone" className="w-[35px] md:w-11" />
+              <div className="">
+                <p className="font-bold md:text-lg lg:text-xl">Call Us</p>
+                <p className="text-xs md:text-sm lg:text-base">+123-456-7890</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form action="" className="grid grid-cols-2 gap-6 mt-8 md:m-0 lg:gap-8 lg:w-[50%]">
+          <div className="flex flex-col">
+            <label htmlFor="firstname" className="contact_label">First Name</label>
+            <input type="text" id='firstname' className='contact_input_field' />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="last-name" className="contact_label">Last Name</label>
+            <input type="text" id='last-name' className='contact_input_field' />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="mat-num" className="contact_label">Matric No</label>
+            <input type="text" id='mat-num' className='contact_input_field' />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="email" className="contact_label">School Email</label>
+            <input type="email" id='email' className='contact_input_field' />
+          </div>
+          <div className="flex flex-col col-span-2">
+            <label htmlFor="message" className="contact_label">Message</label>
+            <textarea name="message" id="message" className='contact_input_field' cols="30" rows="6"></textarea>
+          </div>
+          <button className='border-3 border-[#41A94E] rounded-4xl py-2 text-[#41A94E] font-semibold text-lg w-1/2 place-self-center col-span-2 cursor-pointer md:text-2xl'>Contact Us</button>
+        </form>
       </section>
     </div>
   );
