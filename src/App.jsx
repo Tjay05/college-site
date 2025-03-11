@@ -23,10 +23,11 @@ const router = createBrowserRouter(
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   return (
-    <ModalContext.Provider value={{ isModalOpen, setIsModalOpen }}>
-      <RouterProvider router={router} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+    <ModalContext.Provider value={{ isModalOpen, setIsModalOpen, isLoginModalOpen, setIsLoginModalOpen }}>
+      <RouterProvider router={router} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} isLoginModalOpen={isLoginModalOpen} setIsLoginModalOpen={setIsLoginModalOpen} />
     </ModalContext.Provider>
   )
 }

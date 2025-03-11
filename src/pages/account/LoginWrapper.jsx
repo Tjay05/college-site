@@ -6,19 +6,19 @@ import { IoMdClose } from "react-icons/io";
 import { useContext } from "react";
 import { ModalContext } from "../../App";
 import { useState } from "react";
-import Stud_Signup from "./Student_Signup";
-import Lecturer_Signup from "./Lecturer_SignUp";
+import StudentLogin from "./Stud_Login";
+import Lecturer_Login from "./Lecturer_Login";
 
-const AccountPopup = () => {
-  const { setIsModalOpen, isModalOpen } = useContext(ModalContext);
+const LoginWrap = () => {
+  const { setIsLoginModalOpen, isLoginModalOpen } = useContext(ModalContext);
   const [formType, setFormType] = useState('student');
 
   return (
     <div className="absolute top-0 inset-0 backdrop-blur-2xl z-99">
       <div className="bg-white p-6 rounded-lg mx-auto w-[90%] md:w-[75%] flex flex-col mt-12 md:mt-18">
-        <IoMdClose onClick={() => setIsModalOpen(!isModalOpen)} size={30} className='self-end cursor-pointer'/>
+        <IoMdClose onClick={() => setIsLoginModalOpen(!isLoginModalOpen)} size={30} className='self-end cursor-pointer'/>
         <div className="m-2 font-[Inter]">
-          <h2 className="text-[#41A94E] text-center font-bold text-xl md:text-4xl">Sign up to get started</h2>
+          <h2 className="text-[#41A94E] text-center font-bold text-xl md:text-4xl">Login</h2>
           <div className="border p-2 rounded-lg flex justify-between my-6 font-bold text-base md:my-10">
             <div onClick={() => setFormType('student')} className={`role_button ${formType === 'student' ? 'bg-[#41A94E]' : 'bg-white'}`}>
               <img src={`${formType === 'student' ? Active_Stud_Icon : Inactive_Student_Icon}`} alt="" className="w-6 lg:w-8" />
@@ -29,12 +29,12 @@ const AccountPopup = () => {
               <p className={`${formType === 'lecturer' ? 'text-white' : 'text-[#41A94E]'}`}>Lecturer</p>
             </div>
           </div>
-          { formType === 'student' && <Stud_Signup/>}
-          { formType === 'lecturer' && <Lecturer_Signup/>}
+          { formType === 'student' && <StudentLogin/>}
+          { formType === 'lecturer' && <Lecturer_Login/>}
         </div>
       </div>
     </div>
   );
 }
  
-export default AccountPopup;
+export default LoginWrap;

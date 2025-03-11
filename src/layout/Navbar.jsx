@@ -6,7 +6,7 @@ import { ModalContext } from "../App";
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [toggleNav, setToggleNav] = useState(false);
-  const { isModalOpen, setIsModalOpen } = useContext(ModalContext);
+  const { isModalOpen, setIsModalOpen, isLoginModalOpen, setIsLoginModalOpen } = useContext(ModalContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -58,8 +58,8 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="hidden lg:flex gap-4 text-sm md:text-[16px] font-[]">
-            <Link href="" className="border border-white text-white px-3 py-1.5">Contact Us</Link>
-            <button onClick={() => setIsModalOpen(true)} className="text-[#1E1E1E] border bg-white px-3 py-1.5">Login</button>
+            <button onClick={() => setIsModalOpen(true)} className="border border-white text-white px-3 py-1.5">Sign Up</button>
+            <button onClick={() => setIsLoginModalOpen(true)} className="text-[#1E1E1E] border bg-white px-3 py-1.5">Login</button>
           </div>
         </div>
         {/* Mobile Nav */}
@@ -81,11 +81,14 @@ const Navbar = () => {
               <NavLink onClick={handleNavToggle} className="links" to="">Research & Projects</NavLink>
             </li>
             <li className="nav_link my-2">
-              <Link onClick={handleNavToggle} className="border border-white text-white px-3 py-2 mb-2" to="">Contact Us</Link>
+              <button onClick={() => {
+                setIsModalOpen(true);
+                handleNavToggle();
+              }} className="border border-white text-white px-3 py-2 mb-2" to="">Sign Up</button>
             </li>
             <li className="nav_link mb-2">
               <button onClick={() => {
-                setIsModalOpen(true);
+                setIsLoginModalOpen(true);
                 handleNavToggle();
               }} className="text-[#1E1E1E] border bg-white px-7 py-2 cursor-pointer" to="">Login</button>
             </li>
@@ -93,6 +96,9 @@ const Navbar = () => {
         )}
       </nav>
       {isModalOpen && (
+        <div className="fixed inset-0 backdrop-blur-2xl z-99"></div>
+      )}
+      {isLoginModalOpen && (
         <div className="fixed inset-0 backdrop-blur-2xl z-99"></div>
       )}
     </div>

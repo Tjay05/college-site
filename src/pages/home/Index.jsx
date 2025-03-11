@@ -21,9 +21,10 @@ import phone_icon from '../../assets/icons/call.svg';
 import { useContext } from 'react';
 import { ModalContext } from '../../App';
 import AccountPopup from '../account/Index';
+import LoginWrap from '../account/LoginWrapper';
 
 const Home = () => {
-  const { isModalOpen, setIsModalOpen } =useContext(ModalContext);
+  const { isModalOpen, isLoginModalOpen } =useContext(ModalContext);
 
   return (
     <div className="relative">
@@ -211,6 +212,9 @@ const Home = () => {
       </div>
       {isModalOpen && (
         <AccountPopup/>
+      )}
+      {isLoginModalOpen && (
+        <LoginWrap/>
       )}
     </div>
   );
