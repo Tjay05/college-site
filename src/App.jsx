@@ -1,3 +1,5 @@
+import { createContext } from 'react';
+import { useState } from 'react';
 import {
   createBrowserRouter,
   Route,
@@ -6,6 +8,8 @@ import {
 } from 'react-router-dom';
 import AppLayout from './layout/Index';
 import Home from './pages/home/Index';
+
+export const ModalContext = createContext();
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,10 +22,12 @@ const router = createBrowserRouter(
 )
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <>
-      <RouterProvider router={router}/>
-    </>
+    <ModalContext.Provider value={{ isModalOpen, setIsModalOpen }}>
+      <RouterProvider router={router} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+    </ModalContext.Provider>
   )
 }
 
