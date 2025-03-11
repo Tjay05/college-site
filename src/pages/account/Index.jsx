@@ -10,7 +10,7 @@ import Stud_Signup from "./Student_Signup";
 import Lecturer_Signup from "./Lecturer_SignUp";
 
 const AccountPopup = () => {
-  const { setIsModalOpen, isModalOpen } = useContext(ModalContext);
+  const { setIsModalOpen, isModalOpen, setIsLoginModalOpen } = useContext(ModalContext);
   const [formType, setFormType] = useState('student');
 
   return (
@@ -31,6 +31,13 @@ const AccountPopup = () => {
           </div>
           { formType === 'student' && <Stud_Signup/>}
           { formType === 'lecturer' && <Lecturer_Signup/>}
+          <p className="text-center text-[#41A94E] font-bold text-sm my-4 col-span-2 lg:text-base">Already have an account? <span onClick={
+            () => {
+              setIsModalOpen(!isModalOpen);
+              setIsLoginModalOpen(true);
+            }
+            } className="underline font-normal cursor-pointer">Login</span></p>
+
         </div>
       </div>
     </div>

@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const StudentLogin = () => {
   return (
     <form action="" className="my-8 lg:grid lg:grid-cols-2 lg:gap-x-16">
@@ -26,7 +24,6 @@ const StudentLogin = () => {
         <label htmlFor="check" className="text-xs lg:text-base">I have read and understood and agree to the <span className="underline">Terms & Condition</span> and <span className="underline">Privacy Policy</span></label>
       </div>
       <button className="rounded-lg text-white col-span-2 mx-auto bg-[#41A94E] font-semibold w-full p-2 md:w-1/2 lg:text-xl">Sign Up</button>
-      <p className="text-center text-[#41A94E] font-bold text-sm my-4 col-span-2 lg:text-base">Don't have an account? <Link className="underline font-normal">Register</Link></p>
     </form>
   );
 }

@@ -10,7 +10,7 @@ import StudentLogin from "./Stud_Login";
 import Lecturer_Login from "./Lecturer_Login";
 
 const LoginWrap = () => {
-  const { setIsLoginModalOpen, isLoginModalOpen } = useContext(ModalContext);
+  const { setIsLoginModalOpen, isLoginModalOpen, setIsModalOpen } = useContext(ModalContext);
   const [formType, setFormType] = useState('student');
 
   return (
@@ -31,6 +31,12 @@ const LoginWrap = () => {
           </div>
           { formType === 'student' && <StudentLogin/>}
           { formType === 'lecturer' && <Lecturer_Login/>}
+          <p className="text-center text-[#41A94E] font-bold text-sm my-4 col-span-2 lg:text-base">Don't have an account? <span onClick={
+            () => {
+              setIsLoginModalOpen(!isLoginModalOpen);
+              setIsModalOpen(true);
+            }
+          } className="underline font-normal cursor-pointer">Register</span></p>
         </div>
       </div>
     </div>
