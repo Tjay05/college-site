@@ -20,7 +20,7 @@ import mail_icon from '../../assets/icons/email.svg';
 import phone_icon from '../../assets/icons/call.svg';
 import { useContext } from 'react';
 import { ModalContext } from '../../App';
-import SignupPopup from '../account/Signup';
+import AccountPopup from '../account/Index';
 
 const Home = () => {
   const { isModalOpen, setIsModalOpen } =useContext(ModalContext);
@@ -210,7 +210,7 @@ const Home = () => {
         </section>
       </div>
       {isModalOpen && (
-        <SignupPopup/>
+        <AccountPopup/>
       )}
     </div>
   );
