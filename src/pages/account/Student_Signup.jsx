@@ -1,8 +1,6 @@
-import { useContext } from "react";
-import { ModalContext } from "../../App";
 import { Link } from "react-router-dom";
 
-const SignupPopup = () => {
+const Stud_Signup = () => {
   return (
     <form action="" className="my-8 lg:grid lg:grid-cols-2 lg:gap-x-16">
       <div className="register_div">
@@ -78,4 +76,4 @@ const SignupPopup = () => {
   );
 }
  
-export default SignupPopup;
+export default Stud_Signup;
