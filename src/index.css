@@ -56,3 +56,19 @@
 .contact_input_field {
   @apply border-b border-[#33333333] text-sm lg:text-base px-2 font-[Inter]
 }
+
+.role_button {
+  @apply flex gap-1 items-center justify-center rounded-md p-2 w-[47%] cursor-pointer md:w-[40%] lg:p-4 lg:text-2xl
+}
+
+.register_div {
+  @apply flex flex-col my-1
+}
+
+.register_label {
+  @apply text-[#41A94E] font-medium text-base lg:text-xl
+}
+
+.register_input {
+  @apply border rounded-lg p-1 text-sm my-1.5 w-full lg:p-2 lg:text-base
+}
