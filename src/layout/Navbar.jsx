@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { ModalContext } from "../App";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [toggleNav, setToggleNav] = useState(false);
+  const { isModalOpen, setIsModalOpen } = useContext(ModalContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -80,7 +83,10 @@ const Navbar = () => {
             <Link onClick={handleNavToggle} className="border border-white text-white px-3 py-2 mb-2" to="">Contact Us</Link>
           </li>
           <li className="nav_link mb-2">
-            <Link onClick={handleNavToggle} className="text-[#1E1E1E] border bg-white px-7 py-2" to="">Login</Link>
+            <button onClick={() => {
+              setIsModalOpen(true);
+              handleNavToggle();
+            }} className="text-[#1E1E1E] border bg-white px-7 py-2 cursor-pointer" to="">Login</button>
           </li>
         </ul>
       )}
