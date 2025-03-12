@@ -24,7 +24,7 @@ import AccountPopup from '../account/Index';
 import LoginWrap from '../account/LoginWrapper';
 
 const Home = () => {
-  const { isModalOpen, isLoginModalOpen } =useContext(ModalContext);
+  const { isModalOpen, isLoginModalOpen } = useContext(ModalContext);
 
   return (
     <div className="relative">
@@ -49,7 +49,7 @@ const Home = () => {
             </div>
           </div>
         </header>
-        <section className="rule my-4 font-[Inter] lg:my-8">
+        <section id='resources' className="rule my-4 font-[Inter] lg:my-8">
           <h2 className="text-black font-extrabold text-center text-2xl mt-8 lg:mt-12 lg:text-5xl lg:w-[85%] mx-auto">Elevate Your Academic Journey with Our Department</h2>
           <p className="text-[#00000080] text-center font-medium my-2 lg:text-xl">Access a wealth of resources and support</p>
           <div className="my-12 lg:flex justify-between lg:my-20">
@@ -143,7 +143,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="rule font-[Inter] text-center">
+        <section id='community' className="rule font-[Inter] text-center">
           <h2 className="text-black font-extrabold text-3xl lg:text-5xl">What Our Community Are Saying</h2>
           <p className="text-[#00000080] my-3 font-medium lg:text-lg">Your academic and professional growth is our topmost priority!</p>
           <div className="my-12 shadow-lg p-4 rounded-3xl lg:flex lg:gap-18 lg:px-24 lg:py-12 relative bg-[#41A94EE5] z-90 lg:my-36">
