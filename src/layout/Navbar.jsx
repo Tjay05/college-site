@@ -48,13 +48,13 @@ const Navbar = () => {
               <NavLink className="links" to="About">About </NavLink>
             </li>
             <li className="nav_link">
-              <NavLink className="links" to="">Academics</NavLink>
+              <a className="links">Academics</a>
             </li>
             <li className="nav_link">
-              <NavLink className="links" to="">Community</NavLink>
+              <a className="links" href="#community">Community</a>
             </li>
             <li className="nav_link">
-              <NavLink className="links" to="">Research & Projects</NavLink>
+              <a className="links" href="#resources">Research & Projects</a>
             </li>
           </ul>
           <div className="hidden lg:flex gap-4 text-sm md:text-[16px] font-[]">
@@ -69,16 +69,16 @@ const Navbar = () => {
               <NavLink onClick={handleNavToggle} className="links" to="/">Home</NavLink>
             </li>
             <li className="nav_link">
-              <NavLink onClick={handleNavToggle} className="links" to="">About</NavLink>
+              <NavLink onClick={handleNavToggle} className="links" to="About">About</NavLink>
             </li>
             <li className="nav_link">
-              <NavLink onClick={handleNavToggle} className="links" to="">Academics</NavLink>
+              <a onClick={handleNavToggle} className="links">Academics</a>
             </li>
             <li className="nav_link">
-              <NavLink onClick={handleNavToggle} className="links" to="">Community</NavLink>
+              <a onClick={handleNavToggle} className="links" href="#community">Community</a>
             </li>
             <li className="nav_link">
-              <NavLink onClick={handleNavToggle} className="links" to="">Research & Projects</NavLink>
+              <a onClick={handleNavToggle} className="links" href="#resources">Research & Projects</a>
             </li>
             <li className="nav_link my-2">
               <button onClick={() => {
