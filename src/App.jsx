@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import AppLayout from './layout/Index';
 import About from './pages/about/Index';
+import Academics from './pages/academics/Index';
 import Home from './pages/home/Index';
 
 export const ModalContext = createContext();
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
       <Route element={<AppLayout/>}>
         <Route index element={<Home/>}/>
         <Route path='About' element={<About/>}/>
+        <Route path='Academics' element={<Academics/>}/>
       </Route>
     </Route>
   )
