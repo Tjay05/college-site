@@ -14,7 +14,7 @@
 }
 
 .links {
-  @apply opacity-50 md:border-b-2 border-[#1E1E1E] md:px-2 md:pb-4
+  @apply opacity-50 md:border-b-2 border-[#1E1E1E] md:px-0.5 xl:px-2 md:pb-4
 }
 
 .links.active {
