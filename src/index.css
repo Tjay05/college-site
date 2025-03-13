@@ -72,3 +72,7 @@
 .register_input {
   @apply border rounded-lg p-1 text-sm my-1.5 w-full lg:p-2 lg:text-base
 }
+
+.level_selector {
+  @apply rounded-3xl flex gap-x-1 border-2 border-[#41A94E] font-medium p-2 cursor-pointer md:text-2xl md:px-6 md:rounded-full
+}
