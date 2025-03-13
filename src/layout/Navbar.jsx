@@ -25,7 +25,7 @@ const Navbar = () => {
     <div className="relative">
       <nav className="bg-[#1E1E1E] relative z-30">
         <div className="flex justify-between items-center rule py-3 md:py-2">
-          <p className="text-[#41A94E] font-[Inter] font-semibold text-lg md:text-2xl">College Dept.</p>
+          <p className="text-[#41A94E] font-[Inter] font-semibold text-xl md:text-2xl">College Dept.</p>
           {/* Hamburger Menu */}
           {isMobile && (
             <div
@@ -57,7 +57,7 @@ const Navbar = () => {
               <a className="links" href="#resources">Research & Projects</a>
             </li>
           </ul>
-          <div className="hidden lg:flex gap-4 text-sm md:text-[16px] font-[]">
+          <div className="hidden md:flex gap-4 text-sm md:text-[16px]">
             <button onClick={() => setIsModalOpen(true)} className="border border-white text-white px-3 py-1.5">Sign Up</button>
             <button onClick={() => setIsLoginModalOpen(true)} className="text-[#1E1E1E] border bg-white px-3 py-1.5">Login</button>
           </div>
