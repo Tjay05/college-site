@@ -23,13 +23,13 @@ const Navbar = () => {
 
   return (
     <div className="relative">
-      <nav className="bg-[#1E1E1E] relative">
+      <nav className="bg-[#1E1E1E] relative z-30">
         <div className="flex justify-between items-center rule py-3 md:py-2">
           <p className="text-[#41A94E] font-[Inter] font-semibold text-lg md:text-2xl">College Dept.</p>
           {/* Hamburger Menu */}
           {isMobile && (
             <div
-              className="flex flex-col justify-between w-6 h-[15px]"
+              className="flex flex-col justify-between w-6 h-[15px] cursor-pointer"
               onClick={handleNavToggle}
             >
               <span className="hamburger"></span>
@@ -51,7 +51,7 @@ const Navbar = () => {
               <NavLink className="links" to="Academics">Academics</NavLink>
             </li>
             <li className="nav_link">
-              <a className="links" href="#community">Community</a>
+              <NavLink className="links" to="Community">Community</NavLink>
             </li>
             <li className="nav_link">
               <a className="links" href="#resources">Research & Projects</a>
@@ -75,7 +75,7 @@ const Navbar = () => {
               <NavLink onClick={handleNavToggle} className="links" to="Academics">Academics</NavLink>
             </li>
             <li className="nav_link">
-              <a onClick={handleNavToggle} className="links" href="#community">Community</a>
+              <NavLink onClick={handleNavToggle} className="links" to="Community">Community</NavLink>
             </li>
             <li className="nav_link">
               <a onClick={handleNavToggle} className="links" href="#resources">Research & Projects</a>
