@@ -7,7 +7,7 @@ import Bg3_tl from '../../assets/images/bg3-tl.png';
 const Academics = () => {
   return (
     <div className="relative font-[Inter]"> 
-      <h1 className="absolute top-[-11rem] z-10 left-[-4rem] lg:text-[16rem] font-bold text-[#0000001A] opacity-100 select-none w-full">Academics</h1>
+      <h1 className="absolute top-[-11rem] z-10 left-[-4rem] md:text-[11.5rem] xl:text-[16rem] font-bold text-[#0000001A] opacity-100 select-none w-full">Academics</h1>
       <section className="my-4 mt-24">
         <div className="rule my-6">
           <header style={{

@@ -18,7 +18,7 @@ const About = () => {
   return (
     <div className="relative">
       <div className="relative font-[Inter]">
-        <h1 className="absolute top-[-8rem] --z-10 left-[-3rem] lg:text-[19.5rem] font-bold text-[#0000001A] opacity-100 select-none">About Us</h1>
+        <h1 className="absolute top-[-8rem] --z-10 left-[-3rem] md:text-[11.5rem] xl:text-[18rem] font-bold text-[#0000001A] opacity-100 select-none">About Us</h1>
         <section className='my-4'>
           <div className="rule my-8">
             <h1 className="font-bold text-[#41A94E] text-center text-4xl md:text-left md:text-6xl">About Us</h1>
