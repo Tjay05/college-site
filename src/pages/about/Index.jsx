@@ -18,8 +18,9 @@ const About = () => {
   return (
     <div className="relative">
       <div className="relative font-[Inter]">
+        <h1 className="absolute top-[-8rem] --z-10 left-[-3rem] lg:text-[19.5rem] font-bold text-[#0000001A] opacity-100 select-none">About Us</h1>
         <section className='my-4'>
-          <div className="rule my-6">
+          <div className="rule my-8">
             <h1 className="font-bold text-[#41A94E] text-center text-4xl md:text-left md:text-6xl">About Us</h1>
             <div className="flex flex-col gap-y-8 my-6 md:flex-row md:my-10 justify-between md:items-center">
               <img src={SmilyGuy} alt="" className="w-full object-cover rounded-xl md:h-[470px] md:w-[40%]" />
