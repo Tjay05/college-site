@@ -63,10 +63,18 @@ const Navbar = () => {
               <NavLink className="links" to="Research">Research & Projects</NavLink>
             </li>
           </ul>
-          { isPageRoute && <div className="hidden md:flex gap-4 text-sm md:text-[16px]">
-            <button onClick={() => setIsModalOpen(true)} className="border border-white text-white px-3 py-1.5">Sign Up</button>
-            <button onClick={() => setIsLoginModalOpen(true)} className="text-[#1E1E1E] border bg-white px-3 py-1.5">Login</button>
-          </div>}
+          { isPageRoute && (
+            <div className="hidden md:flex gap-4 text-sm md:text-[16px]">
+              <button onClick={() => setIsModalOpen(true)} className="border border-white text-white px-3 py-1.5">Sign Up</button>
+              <button onClick={() => setIsLoginModalOpen(true)} className="text-[#1E1E1E] border bg-white px-3 py-1.5">Login</button>
+            </div>
+          )}
+          { !isPageRoute && (
+            <div className="hidden font-semibold md:flex gap-4 items-center font-[Outfit]">
+              <p className="text-white text-lg">No Profile</p>
+              <span className="bg-white text-[#1E1E1E] px-2.5 py-2 rounded-full text-lg">NP</span>
+            </div>
+          )}
         </div>
         {/* Mobile Nav */}
         {isMobile && (
@@ -102,6 +110,12 @@ const Navbar = () => {
                 </li>
               </>
             )}
+            { !isPageRoute && (
+            <div className="font-semibold flex gap-4 items-center font-[Outfit] opacity-40 my-2">
+              <p className="text-white text-lg">No Profile</p>
+              <span className="bg-white text-[#1E1E1E] px-2.5 py-2 rounded-full text-lg">NP</span>
+            </div>
+          )}
           </ul>
         )}
       </nav>
