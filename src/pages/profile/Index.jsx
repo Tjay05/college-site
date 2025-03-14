@@ -5,6 +5,47 @@ import tinubu from "../../assets/images/tinubu.png";
 import File_Icon from '../../assets/icons/dark_file.svg';
 
 const Profile = () => {
+  const blogs = [
+    {
+      id: 1,
+      image: tinubu,
+      title: 'UNIJOS VC signs in new law for Post Graduate students'
+    },
+    {
+      id: 2,
+      image:prof_pic,
+      title: 'Dangers Of Drug Abuse'
+    }
+  ];
+
+  const materials = [
+    {
+      id: 1,
+      image: File_Icon,
+      title: 'Student and lecturer project supervisee',
+    },
+    {
+      id: 2,
+      image: File_Icon,
+      title: 'Student and lecturer project supervisee',
+    },
+    {
+      id: 3,
+      image: File_Icon,
+      title: 'Student and lecturer project supervisee',
+    },
+    {
+      id: 4,
+      image: File_Icon,
+      title: 'Student and lecturer project supervisee',
+    },
+    {
+      id: 5,
+      image: File_Icon,
+      title: 'Student and lecturer project supervisee',
+    },
+  ];
+
   return (
     <div className="relative font-[Inter]">
       <header className="rule my-8 md:my-16 ">
@@ -28,89 +69,30 @@ const Profile = () => {
       <section className="rule section_spacer">
         <h2 className="font-bold text-center text-3xl my-2 md:text-6xl">Uploaded Content</h2>
         <div className="grid grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-16 lg:my-12 my-8">
-          <div className="bg-[#41A94E66] rounded-2xl flex flex-col overflow-hidden">
-            <img src={File_Icon} alt="File" className="w-20 place-self-center p-5 lg:w-28" />
-            <div className="bg-black flex items-center justify-between p-3 lg:p-4">
-              <p className="font-medium text-white text-xs lg:text-base">Student and lecturer project supervisee</p>
-              <MdDelete color="red" size={50} className="cursor-pointer" />
+          { materials.map((material) =>(
+            <div className="bg-[#41A94E66] rounded-2xl flex flex-col overflow-hidden" key={material.id}>
+              <img src={material.image} alt="File" className="w-20 place-self-center p-5 lg:w-28" />
+              <div className="bg-black flex items-center justify-between p-3 lg:p-4">
+                <p className="font-medium text-white text-xs lg:text-base">{ material.title }</p>
+                <MdDelete color="red" size={50} className="cursor-pointer" />
+              </div>
             </div>
-          </div>
-          <div className="bg-[#41A94E66] rounded-2xl flex flex-col overflow-hidden">
-            <img src={File_Icon} alt="File" className="w-20 place-self-center p-5 lg:w-28" />
-            <div className="bg-black flex items-center justify-between p-3 lg:p-4">
-              <p className="font-medium text-white text-xs lg:text-base">Student and lecturer project supervisee</p>
-              <MdDelete color="red" size={50} className="cursor-pointer" />
-            </div>
-          </div>
-          <div className="bg-[#41A94E66] rounded-2xl flex flex-col overflow-hidden">
-            <img src={File_Icon} alt="File" className="w-20 place-self-center p-5 lg:w-28" />
-            <div className="bg-black flex items-center justify-between p-3 lg:p-4">
-              <p className="font-medium text-white text-xs lg:text-base">Student and lecturer project supervisee</p>
-              <MdDelete color="red" size={50} className="cursor-pointer" />
-            </div>
-          </div>
-          <div className="bg-[#41A94E66] rounded-2xl flex flex-col overflow-hidden">
-            <img src={File_Icon} alt="File" className="w-20 place-self-center p-5 lg:w-28" />
-            <div className="bg-black flex items-center justify-between p-3 lg:p-4">
-              <p className="font-medium text-white text-xs lg:text-base">Student and lecturer project supervisee</p>
-              <MdDelete color="red" size={50} className="cursor-pointer" />
-            </div>
-          </div>
-          <div className="bg-[#41A94E66] rounded-2xl flex flex-col overflow-hidden">
-            <img src={File_Icon} alt="File" className="w-20 place-self-center p-5 lg:w-28" />
-            <div className="bg-black flex items-center justify-between p-3 lg:p-4">
-              <p className="font-medium text-white text-xs lg:text-base">Student and lecturer project supervisee</p>
-              <MdDelete color="red" size={50} className="cursor-pointer" />
-            </div>
-          </div>
-          <div className="bg-[#41A94E66] rounded-2xl flex flex-col overflow-hidden">
-            <img src={File_Icon} alt="File" className="w-20 place-self-center p-5 lg:w-28" />
-            <div className="bg-black flex items-center justify-between p-3 lg:p-4">
-              <p className="font-medium text-white text-xs lg:text-base">Student and lecturer project supervisee</p>
-              <MdDelete color="red" size={50} className="cursor-pointer" />
-            </div>
-          </div>
-          <div className="bg-[#41A94E66] rounded-2xl flex flex-col overflow-hidden">
-            <img src={File_Icon} alt="File" className="w-20 place-self-center p-5 lg:w-28" />
-            <div className="bg-black flex items-center justify-between p-3 lg:p-4">
-              <p className="font-medium text-white text-xs lg:text-base">Student and lecturer project supervisee</p>
-              <MdDelete color="red" size={50} className="cursor-pointer" />
-            </div>
-          </div>
-          <div className="bg-[#41A94E66] rounded-2xl flex flex-col overflow-hidden">
-            <img src={File_Icon} alt="File" className="w-20 place-self-center p-5 lg:w-28" />
-            <div className="bg-black flex items-center justify-between p-3 lg:p-4">
-              <p className="font-medium text-white text-xs lg:text-base">Student and lecturer project supervisee</p>
-              <MdDelete color="red" size={50} className="cursor-pointer" />
-            </div>
-          </div>
+          ))}
           <button className="col-span-2 md:col-span-3 lg:col-span-4 font-semibold bg-[#41A94E] rounded-3xl py-2 text-white text-lg cursor-pointer md:py-4 md:text-4xl">Upload Content</button>
         </div>
       </section>
       <section className="rule section_spacer">
         <h2 className="font-bold text-center text-3xl my-2 md:text-6xl">Uploaded Blog Content</h2>
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-16 lg:my-12 my-8">
-          <div className="bg-[#41A94E] rounded-2xl flex flex-col overflow-hidden">
-            <img src={tinubu} alt="File" className="w-full" />
-            <div className="bg-[#41A94E] flex items-center justify-between p-3 lg:p-4">
-              <p className="font-medium text-white text-sm lg:text-lg">UNIJOS VC signs in new law for Post Graduate students </p>
-              <MdDelete color="black" size={50} className="cursor-pointer" />
+          { blogs.map((blog) => (
+            <div className="bg-[#41A94E] rounded-2xl flex flex-col overflow-hidden" key={blog.id}>
+              <img src={blog.image} alt="File" className="w-full h-40 mdh-60 object-cover" />
+              <div className="bg-[#41A94E] flex items-center justify-between p-3 lg:p-4">
+                <p className="font-medium text-white text-sm lg:text-lg">{ blog.title }</p>
+                <MdDelete color="black" size={50} className="cursor-pointer" />
+              </div>
             </div>
-          </div>
-          <div className="bg-[#41A94E] rounded-2xl flex flex-col overflow-hidden">
-            <img src={tinubu} alt="File" className="w-full" />
-            <div className="bg-[#41A94E] flex items-center justify-between p-3 lg:p-4">
-              <p className="font-medium text-white text-sm lg:text-lg">UNIJOS VC signs in new law for Post Graduate students </p>
-              <MdDelete color="black" size={50} className="cursor-pointer" />
-            </div>
-          </div>
-          <div className="bg-[#41A94E] rounded-2xl flex flex-col overflow-hidden">
-            <img src={tinubu} alt="File" className="w-full" />
-            <div className="bg-[#41A94E] flex items-center justify-between p-3 lg:p-4">
-              <p className="font-medium text-white text-sm lg:text-lg">UNIJOS VC signs in new law for Post Graduate students </p>
-              <MdDelete color="black" size={50} className="cursor-pointer" />
-            </div>
-          </div>
+          ))} 
           <button className="col-span-1 md:col-span-2 lg:col-span-3 font-semibold bg-[#41A94E] rounded-3xl py-2 text-white text-lg cursor-pointer md:py-3 md:text-3xl">Write A Blog</button>
         </div>
       </section>

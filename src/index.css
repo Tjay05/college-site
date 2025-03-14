@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+
 @import "tailwindcss";
 
 .rule {
@@ -19,6 +20,14 @@
 
 .links.active {
   @apply opacity-100 border-white
+}
+
+.profile_link {
+  @apply opacity-50
+}
+
+.profile_link.active {
+  @apply opacity-100
 }
 
 .heading {

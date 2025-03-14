@@ -25,7 +25,8 @@ const Navbar = () => {
   const isPageRoute = !location.pathname.includes('/About') &&
   !location.pathname.includes('Academics') &&
   !location.pathname.includes('Community') &&
-  !location.pathname.includes('Research');
+  !location.pathname.includes('Research') && 
+  !location.pathname.includes('Profile');
 
   return (
     <div className="relative">
@@ -70,10 +71,10 @@ const Navbar = () => {
             </div>
           )}
           { !isPageRoute && (
-            <div className="hidden font-semibold md:flex gap-4 items-center font-[Outfit]">
+            <NavLink to='Profile' className="hidden font-semibold md:flex gap-4 items-center font-[Outfit] z-30 profile_link">
               <p className="text-white text-lg">No Profile</p>
               <span className="bg-white text-[#1E1E1E] px-2.5 py-2 rounded-full text-lg">NP</span>
-            </div>
+            </NavLink>
           )}
         </div>
         {/* Mobile Nav */}
@@ -111,10 +112,10 @@ const Navbar = () => {
               </>
             )}
             { !isPageRoute && (
-            <div className="font-semibold flex gap-4 items-center font-[Outfit] opacity-40 my-2">
+            <NavLink onClick={handleNavToggle}  to='Profile' className="font-semibold flex gap-4 items-center font-[Outfit] my-2 profile_link">
               <p className="text-white text-lg">No Profile</p>
               <span className="bg-white text-[#1E1E1E] px-2.5 py-2 rounded-full text-lg">NP</span>
-            </div>
+            </NavLink>
           )}
           </ul>
         )}
