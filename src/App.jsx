@@ -6,11 +6,13 @@ import {
   createRoutesFromElements,
   RouterProvider
 } from 'react-router-dom';
+
 import AppLayout from './layout/Index';
 import About from './pages/about/Index';
 import Academics from './pages/academics/Index';
 import Community from './pages/community/Index';
 import Home from './pages/home/Index';
+import Research_Project from './pages/research & project/Index';
 
 export const ModalContext = createContext();
 
@@ -22,6 +24,7 @@ const router = createBrowserRouter(
         <Route path='About' element={<About/>}/>
         <Route path='Academics' element={<Academics/>}/>
         <Route path='Community' element={<Community/>}/>
+        <Route path='Research' element={<Research_Project/>}/>
       </Route>
     </Route>
   )
