@@ -8,7 +8,7 @@ const Community = () => {
   return (
     <div className="relative font-[Inter]">
       <h1 className="absolute top-[-11rem] z-10 left-[-3rem] md:text-[11.5rem] xl:text-[16rem] font-bold text-[#0000001A] opacity-100 select-none w-full">Community</h1>
-      <section className="my-12 md:mt-24">
+      <section className="section_spacer">
         <div className="rule my-6 flex flex-col">
           <header style={{
             backgroundImage: `url(${News_Pic})`,
@@ -32,7 +32,7 @@ const Community = () => {
           </div>
         </div>
       </section>
-      <section className="rule my-12">
+      <section className="rule section_spacer">
         <img src={Vc_Pic} alt="Uj Vc" className="w-full object-cover md:h-[530px]" />
         <article className='my-4'>
           <h2 className="font-bold text-black text-xl md:text-5xl md:mt-8">UNIJOS VC signs in new law for Post Graduate students</h2>
@@ -42,7 +42,7 @@ const Community = () => {
           </p>
         </article>
       </section>
-      <section className="rule my-12">
+      <section className="rule section_spacer">
         <h2 className="font-bold text-[#41A94E] text-3xl md:text-5xl">News</h2>
         <div className="font-medium">
           <p className="border-b py-2 md:py-4 md:text-2xl">Lorem ipsum dolor sit amet consectetur. Tinubu nibh massa timbuktu pharetra egestas.</p>
@@ -50,7 +50,7 @@ const Community = () => {
         </div>
       </section>
       <section
-        className="bg-[#41A94E] relative my-16 py-8"
+        className="bg-[#41A94E] relative section_spacer py-8"
         style={{
           backgroundImage: `url(${Bg3_tl}), url(${Bg3br})`,
           backgroundPosition: "top left, bottom right",
@@ -70,7 +70,7 @@ const Community = () => {
           <p className="bg-white place-self-center text-black p-2 rounded-xl text-sm md:text-3xl md:px-4 my-4 shadow-2xl"><span className="font-extrabold">Next Up</span> V.C Cup on 16th July starting on monday</p>
         </div>
       </section>
-      <section className="cta rule">
+      <section className="section_spacer rule">
         <header style={{
           backgroundImage: `url(${News_Pic})`,
         }}
