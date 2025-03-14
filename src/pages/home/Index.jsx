@@ -28,7 +28,7 @@ const Home = () => {
 
   return (
     <div className="relative">
-      <div className="relative">
+      <div className="relative ">
         <header
           className={`bg-[#41A94EE5] relative w-full py-4 lg:py-16`}
           style={{

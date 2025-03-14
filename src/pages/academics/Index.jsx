@@ -8,7 +8,7 @@ const Academics = () => {
   return (
     <div className="relative font-[Inter]"> 
       <h1 className="absolute top-[-11rem] z-10 left-[-4rem] md:text-[11.5rem] xl:text-[16rem] font-bold text-[#0000001A] opacity-100 select-none w-full">Academics</h1>
-      <section className="my-4 mt-24">
+      <section className="my-12 md:mt-24">
         <div className="rule my-6">
           <header style={{
             backgroundImage: `url(${CourseMaterials})`,
@@ -17,7 +17,7 @@ const Academics = () => {
           >
             <div className="absolute bg-[#41A94E4D] w-full inset-0"></div>
             <div className="md:ml-8 z-10">
-              <h2 className="font-extrabold text-4xl my-2 pt-10 text-center md:text-left md:my-4 md:pt-30 md:text-6xl">Course Materials & Past Questions </h2>
+              <h2 className="font-extrabold text-4xl my-2 pt-10 text-center md:text-left md:my-4 md:text-6xl">Course Materials & Past Questions </h2>
               <p className="font-semibold text-2xl text-center md:text-left md:text-3xl md:pb-8">Access to all courses</p>
             </div>
           </header>

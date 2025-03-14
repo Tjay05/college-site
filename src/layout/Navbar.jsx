@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <div className="relative">
-      <nav className="bg-[#1E1E1E] relative z-30">
+      <nav className="bg-[#1E1E1E] relative">
         <div className="flex justify-between items-center rule py-3 md:py-2">
           <p className="text-[#41A94E] font-[Inter] font-semibold text-xl md:text-2xl">College Dept.</p>
           {/* Hamburger Menu */}
@@ -39,7 +39,7 @@ const Navbar = () => {
           )}
           {/* Desktop Nav */}
           <ul
-            className="hidden text-white items-center justify-between w-1/2 py-2 md:flex lg:text-lg xl:text-xl font-[Outfit]"
+            className="hidden text-white items-center justify-between w-1/2 py-2 md:flex lg:text-lg xl:text-xl font-[Outfit] z-30"
           >
             <li className="nav_link">
               <NavLink className="links" to="/">Home</NavLink>
@@ -64,7 +64,7 @@ const Navbar = () => {
         </div>
         {/* Mobile Nav */}
         {isMobile && (
-          <ul className={`${toggleNav ? 'opacity-100 translate-y-0.5' : 'opacity-0 translate-y-full'} ${toggleNav ? 'z-90' : ''} transition-all duration-300 shadow-md ease-in-out absolute top-12.5 w-full bg-inherit py-2 border-white border-t flex flex-col justify-center text-white text-lg items-center font-[Outfit]`}>
+          <ul className={`${toggleNav ? 'opacity-100 translate-y-0.5' : 'opacity-0 translate-y-full'} ${toggleNav ? 'z-90' : 'z-0'} transition-all duration-300 shadow-md ease-in-out absolute top-12.5 w-full bg-inherit py-2 border-white border-t flex flex-col justify-center text-white text-lg items-center font-[Outfit]`}>
             <li className="nav_link">
               <NavLink onClick={handleNavToggle} className="links" to="/">Home</NavLink>
             </li>
