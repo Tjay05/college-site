@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { ModalContext } from "../App";
 
@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [toggleNav, setToggleNav] = useState(false);
   const location = useLocation();
-  const { isModalOpen, setIsModalOpen, isLoginModalOpen, setIsLoginModalOpen } = useContext(ModalContext);
+  const { isModalOpen, setIsModalOpen, isLoginModalOpen, setIsLoginModalOpen, isEditModalOpen } = useContext(ModalContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -124,6 +124,9 @@ const Navbar = () => {
         <div className="fixed inset-0 backdrop-blur-2xl z-99"></div>
       )}
       {isLoginModalOpen && (
+        <div className="fixed inset-0 backdrop-blur-2xl z-99"></div>
+      )}
+      {isEditModalOpen && (
         <div className="fixed inset-0 backdrop-blur-2xl z-99"></div>
       )}
     </div>
