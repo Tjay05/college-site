@@ -54,7 +54,7 @@ const Navbar = () => {
               <NavLink className="links" to="Community">Community</NavLink>
             </li>
             <li className="nav_link">
-              <a className="links" href="#resources">Research & Projects</a>
+              <NavLink className="links" to="Research">Research & Projects</NavLink>
             </li>
           </ul>
           <div className="hidden md:flex gap-4 text-sm md:text-[16px]">
@@ -78,7 +78,7 @@ const Navbar = () => {
               <NavLink onClick={handleNavToggle} className="links" to="Community">Community</NavLink>
             </li>
             <li className="nav_link">
-              <a onClick={handleNavToggle} className="links" href="#resources">Research & Projects</a>
+              <NavLink onClick={handleNavToggle} className="links" to="Research">Research & Projects</NavLink>
             </li>
             <li className="nav_link my-2">
               <button onClick={() => {
