@@ -94,10 +94,10 @@ const About = () => {
         <section id='community' className="rule font-[Inter] text-center">
           <h2 className="text-black font-extrabold text-3xl lg:text-5xl">What Our Community Are Saying</h2>
           <p className="text-[#00000080] my-3 font-medium lg:text-lg">Your academic and professional growth is our topmost priority!</p>
-          <div className="my-12 shadow-lg p-4 rounded-3xl lg:flex lg:gap-18 lg:px-24 lg:py-12 relative bg-[#41A94EE5] z-90 lg:my-36">
+          <div className="my-12 shadow-lg p-4 rounded-3xl md:flex md:gap-12 md:px-8 md:py-6 md:my-24 lg:gap-18 lg:px-24 lg:py-12 relative bg-[#41A94EE5] z-90 lg:my-36">
             {/* Rotated BG */}
             <div className="absolute inset-0 bg-[#fff] w-full rotate-1 -z-1 rounded-3xl shadow-lg"></div>
-            <img src={CommunityGuy} alt="Student" className='w-full lg:w-[25%]' />
+            <img src={CommunityGuy} alt="Student" className='w-full sm:h-[300px] object-contain lg:w-[25%]' />
             <div className="my-2 lg:w-[55%] lg:text-left">
               <h3 className="font-extrabold my-3 text-xl lg:text-3xl">Transformative Learning Experiences</h3>
               <p className="font-medium lg:text-lg lg:my-4">"This college department has redefined my academic journey. With structured programs and abundant resources, I feel empowered to excel. The collaborative community has fostered invaluable discussions and connections!"</p>
