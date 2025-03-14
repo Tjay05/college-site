@@ -26,24 +26,24 @@ const Footer = () => {
         <div className="font-[Inter] text-center md:text-lg md:w-[65%] justify-evenly md:flex md:text-left">
           <ul className="">
             <li className="font-bold text-xl my-3">Menu</li>
-            <li className="my-2 opacity-85">Home</li>
-            <li className="my-2 opacity-85">HOD's Profile</li>
-            <li className="my-2 opacity-85">Vision & Mission</li>
-            <li className="my-2 opacity-85">Department Overview</li>
+            <li className="my-2 opacity-85"><a href="/">Home</a></li>
+            <li className="my-2 opacity-85"><a href="/About">HOD's Profile</a></li>
+            <li className="my-2 opacity-85"><a href="#vision">Vision & Mission</a></li>
+            <li className="my-2 opacity-85"><a href="#department">Department Overview</a></li>
           </ul>
           <ul className="">
-            <li className="my-3 font-bold text-xl">Academics</li>
+            <li className="my-3 font-bold text-xl"><a href="/Academics">Academics</a></li>
             <li className="my-2 opacity-85">Lecturer Profiles</li>
-            <li className="my-2 opacity-85">Student Executives</li>
+            <li className="my-2 opacity-85"><a href="#excos">Student Executives</a></li>
             <li className="my-2 opacity-85">Student Documents Uploads</li>
-            <li className="my-2 opacity-85">Course Material</li>
-            <li className="my-2 opacity-85">Past Questions</li>
+            <li className="my-2 opacity-85"><a href="#materials">Course Material</a></li>
+            <li className="my-2 opacity-85"><a href="#materials">Past Questions</a></li>
           </ul>
           <ul className="">
-            <li className="my-3 font-bold text-xl">Community</li>
-            <li className="my-2 opacity-85">Discussion Forum</li>
-            <li className="my-2 opacity-85">News Alerts</li>
-            <li className="my-2 opacity-85">Event Calendars</li>
+            <li className="my-3 font-bold text-xl"><a href="/Community">Community</a></li>
+            <li className="my-2 opacity-85"><a href="#discussion">Discussion Forum</a></li>
+            <li className="my-2 opacity-85"><a href="#news">News Alerts</a></li>
+            <li className="my-2 opacity-85"><a href="#events">Event Calendars</a></li>
           </ul>
         </div>
       </div>

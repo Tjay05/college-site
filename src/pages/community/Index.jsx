@@ -42,7 +42,7 @@ const Community = () => {
           </p>
         </article>
       </section>
-      <section className="rule section_spacer">
+      <section id='news' className="rule section_spacer">
         <h2 className="font-bold text-[#41A94E] text-3xl md:text-5xl">News</h2>
         <div className="font-medium">
           <p className="border-b py-2 md:py-4 md:text-2xl">Lorem ipsum dolor sit amet consectetur. Tinubu nibh massa timbuktu pharetra egestas.</p>
@@ -57,6 +57,7 @@ const Community = () => {
           backgroundRepeat: "no-repeat no-repeat",
           backgroundSize: '7%, 15%'
         }}
+        id='events'
       >
         <div className="rule text-white font-[Inter] text-center lg:text-left relative">
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -70,7 +71,7 @@ const Community = () => {
           <p className="bg-white place-self-center text-black p-2 rounded-xl text-sm md:text-3xl md:px-4 my-4 shadow-2xl"><span className="font-extrabold">Next Up</span> V.C Cup on 16th July starting on monday</p>
         </div>
       </section>
-      <section className="section_spacer rule">
+      <section id='news' className="section_spacer rule">
         <header style={{
           backgroundImage: `url(${News_Pic})`,
         }}

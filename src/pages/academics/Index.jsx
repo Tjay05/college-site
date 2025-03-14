@@ -8,7 +8,7 @@ const Academics = () => {
   return (
     <div className="relative font-[Inter]"> 
       <h1 className="absolute top-[-11rem] z-10 left-[-4rem] md:text-[11.5rem] xl:text-[16rem] font-bold text-[#0000001A] opacity-100 select-none w-full">Academics</h1>
-      <section className="my-12 md:mt-24">
+      <section id='materials' className="my-12 md:mt-24">
         <div className="rule my-6">
           <header style={{
             backgroundImage: `url(${CourseMaterials})`,
@@ -59,6 +59,7 @@ const Academics = () => {
         </div>
       </section>
       <section
+        id='excos'
         className="bg-[#41A94E] relative my-16 py-8 lg:pb-58 lg:mb-70"
         style={{
           backgroundImage: `url(${Bg3_tl}), url(${Bg3br})`,
