@@ -76,3 +76,7 @@
 .level_selector {
   @apply rounded-3xl flex gap-x-1 border-2 border-[#41A94E] font-medium p-2 cursor-pointer md:text-2xl md:px-6 md:rounded-full
 }
+
+.section_spacer {
+  @apply  my-16 lg:my-20
+}
