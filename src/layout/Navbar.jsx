@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { ModalContext } from "../App";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [toggleNav, setToggleNav] = useState(false);
+  const location = useLocation();
   const { isModalOpen, setIsModalOpen, isLoginModalOpen, setIsLoginModalOpen } = useContext(ModalContext);
 
   useEffect(() => {
@@ -20,6 +21,11 @@ const Navbar = () => {
   }, []);
   
   const handleNavToggle = () => setToggleNav(!toggleNav);
+
+  const isPageRoute = !location.pathname.includes('/About') &&
+  !location.pathname.includes('Academics') &&
+  !location.pathname.includes('Community') &&
+  !location.pathname.includes('Research');
 
   return (
     <div className="relative">
@@ -57,10 +63,10 @@ const Navbar = () => {
               <NavLink className="links" to="Research">Research & Projects</NavLink>
             </li>
           </ul>
-          <div className="hidden md:flex gap-4 text-sm md:text-[16px]">
+          { isPageRoute && <div className="hidden md:flex gap-4 text-sm md:text-[16px]">
             <button onClick={() => setIsModalOpen(true)} className="border border-white text-white px-3 py-1.5">Sign Up</button>
             <button onClick={() => setIsLoginModalOpen(true)} className="text-[#1E1E1E] border bg-white px-3 py-1.5">Login</button>
-          </div>
+          </div>}
         </div>
         {/* Mobile Nav */}
         {isMobile && (
@@ -80,18 +86,22 @@ const Navbar = () => {
             <li className="nav_link">
               <NavLink onClick={handleNavToggle} className="links" to="Research">Research & Projects</NavLink>
             </li>
-            <li className="nav_link my-2">
-              <button onClick={() => {
-                setIsModalOpen(true);
-                handleNavToggle();
-              }} className="border border-white text-white px-3 py-2 mb-2" to="">Sign Up</button>
-            </li>
-            <li className="nav_link mb-2">
-              <button onClick={() => {
-                setIsLoginModalOpen(true);
-                handleNavToggle();
-              }} className="text-[#1E1E1E] border bg-white px-7 py-2 cursor-pointer" to="">Login</button>
-            </li>
+            { isPageRoute && (
+              <>
+                <li className="nav_link my-2">
+                  <button onClick={() => {
+                    setIsModalOpen(true);
+                    handleNavToggle();
+                  }} className="border border-white text-white px-3 py-2 mb-2" to="">Sign Up</button>
+                </li>
+                <li className="nav_link mb-2">
+                  <button onClick={() => {
+                    setIsLoginModalOpen(true);
+                    handleNavToggle();
+                  }} className="text-[#1E1E1E] border bg-white px-7 py-2 cursor-pointer" to="">Login</button>
+                </li>
+              </>
+            )}
           </ul>
         )}
       </nav>
