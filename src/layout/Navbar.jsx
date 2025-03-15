@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [toggleNav, setToggleNav] = useState(false);
   const location = useLocation();
-  const { isModalOpen, setIsModalOpen, isLoginModalOpen, setIsLoginModalOpen, isEditModalOpen } = useContext(ModalContext);
+  const { isModalOpen, setIsModalOpen, isLoginModalOpen, setIsLoginModalOpen, isEditModalOpen, isUploadDocOpen } = useContext(ModalContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -127,6 +127,9 @@ const Navbar = () => {
         <div className="fixed inset-0 backdrop-blur-2xl z-99"></div>
       )}
       {isEditModalOpen && (
+        <div className="fixed inset-0 backdrop-blur-2xl z-99"></div>
+      )}
+      {isUploadDocOpen && (
         <div className="fixed inset-0 backdrop-blur-2xl z-99"></div>
       )}
     </div>

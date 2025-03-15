@@ -36,10 +36,13 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [isUploadDocOpen, setIsUploadDocOpen] = useState(false);
 
   return (
-    <ModalContext.Provider value={{ isModalOpen, setIsModalOpen, isLoginModalOpen, setIsLoginModalOpen, isEditModalOpen, setIsEditModalOpen }}>
-      <RouterProvider router={router} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} isLoginModalOpen={isLoginModalOpen} setIsLoginModalOpen={setIsLoginModalOpen} isEditModalOpen={isEditModalOpen} setIsEditModalOpen={setIsEditModalOpen} />
+    <ModalContext.Provider 
+      value={{ isModalOpen, setIsModalOpen, isLoginModalOpen, setIsLoginModalOpen, isEditModalOpen, setIsEditModalOpen, isUploadDocOpen, setIsUploadDocOpen }}
+    >
+      <RouterProvider router={router} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} isLoginModalOpen={isLoginModalOpen} setIsLoginModalOpen={setIsLoginModalOpen} isEditModalOpen={isEditModalOpen} setIsEditModalOpen={setIsEditModalOpen} isUploadDocOpen={isUploadDocOpen} setIsUploadDocOpen={setIsUploadDocOpen} />
     </ModalContext.Provider>
   )
 }

@@ -6,9 +6,10 @@ import File_Icon from '../../assets/icons/dark_file.svg';
 import EditPopup from "./Edit_Popup";
 import { useContext } from "react";
 import { ModalContext } from "../../App";
+import Upload_Doc from "./Upload_Doc_Popup";
 
 const Profile = () => {
-  const { isEditModalOpen, setIsEditModalOpen } = useContext(ModalContext)
+  const { isEditModalOpen, setIsEditModalOpen, isUploadDocOpen, setIsUploadDocOpen } = useContext(ModalContext)
 
   const blogs = [
     {
@@ -84,13 +85,13 @@ const Profile = () => {
                 </div>
               </div>
             ))}
-            <button className="col-span-2 md:col-span-3 lg:col-span-4 font-semibold bg-[#41A94E] rounded-3xl py-2 text-white text-lg cursor-pointer md:py-4 md:text-4xl">Upload Content</button>
+            <button onClick={() => setIsUploadDocOpen(!isUploadDocOpen)} className="col-span-2 md:col-span-3 lg:col-span-4 font-semibold bg-[#41A94E] rounded-3xl py-2 text-white text-lg cursor-pointer md:py-4 md:text-4xl">Upload Content</button>
           </div>
         </section>
         <section className="rule section_spacer">
           <h2 className="font-bold text-center text-3xl my-2 md:text-6xl">Uploaded Blog Content</h2>
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-16 lg:my-12 my-8">
-            { blogs.map((blog) => (
+            { blogs.length !== 0 && blogs.map((blog) => (
               <div className="bg-[#41A94E] rounded-2xl flex flex-col overflow-hidden" key={blog.id}>
                 <img src={blog.image} alt="File" className="w-full h-40 mdh-60 object-cover" />
                 <div className="bg-[#41A94E] flex items-center justify-between p-3 lg:p-4">
@@ -99,12 +100,18 @@ const Profile = () => {
                 </div>
               </div>
             ))} 
+            { blogs.length === 0 && 
+            <h2 className="font-semibold opacity-50 text-center text-2xl md:text-4xl md:col-span-2 lg:col-span-3">No Blog Content</h2> 
+            }
             <button className="col-span-1 md:col-span-2 lg:col-span-3 font-semibold bg-[#41A94E] rounded-3xl py-2 text-white text-lg cursor-pointer md:py-3 md:text-3xl">Write A Blog</button>
           </div>
         </section>
       </div>
       {isEditModalOpen && (
         <EditPopup/>
+      )}
+      {isUploadDocOpen && (
+        <Upload_Doc/>
       )}
     </div>
   );
