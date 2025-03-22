@@ -1,6 +1,9 @@
 import { useState } from "react";
 import CourseMaterials from "../../assets/images/past-questions.png";
 import Caleb from "../../assets/images/exco.png";
+import Presido from '../../assets/images/president.jpg';
+import Vice_Presido from '../../assets/images/vice.jpg';
+import Sec_Gen from '../../assets/images/president.jpg';
 import File_Icon from "../../assets/icons/file_icon.svg";
 import Bg3br from "../../assets/images/bg3-br.png";
 import Bg3_tl from "../../assets/images/bg3-tl.png";
@@ -162,34 +165,11 @@ const Academics = () => {
         }}
       >
         <div className="rule text-white font-[Inter] text-center lg:text-left relative">
-          <h2 className="font-extrabold text-3xl lg:text-5xl">
-            Our Excos & Our Lecturers
-          </h2>
-          <p className="font-medium text-lg opacity-75 my-4 lg:text-2xl lg:w-[75%] lg:opacity-100">
-            Meet our excos and lecturers
-          </p>
-          <div className="grid grid-cols-2 gap-x-12 md:grid-cols-3 lg:grid-cols-4 lg:absolute w-full">
+          <h2 className='font-extrabold text-3xl lg:text-5xl'>Our Excos & Our Lecturers</h2>
+          <p className="font-medium text-lg opacity-75 my-4 lg:text-2xl lg:w-[75%] lg:opacity-100">Meet our excos and lecturers</p>
+          <div className="grid grid-cols-2 gap-x-8 lg:gap-x-28 md:grid-cols-3 lg:absolute w-full">
             <div className="card">
-              <img
-                src={Caleb}
-                alt="Exco"
-                className="object-cover w-full md:h-48"
-              />
-              <div className="p-4 bg-[#41A94E] text-center h-full">
-                <h3 className="font-bold text-black text-lg lg:text-2xl">
-                  Caleb Kim
-                </h3>
-                <p className="text-black text-xs lg:text-base">
-                  Dept. President
-                </p>
-              </div>
-            </div>
-            <div className="card">
-              <img
-                src={Caleb}
-                alt="Exco"
-                className="object-cover w-full md:h-48"
-              />
+              <img src={Presido} alt="Exco" className="object-cover w-full md:h-48" />
               <div className="p-4 bg-[#41A94E] text-center h-full">
                 <h3 className="font-bold text-black text-lg lg:text-2xl">
                   Caleb Kim
