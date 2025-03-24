@@ -3,10 +3,10 @@ import CourseMaterials from "../../assets/images/past-questions.png";
 import Caleb from "../../assets/images/exco.png";
 import Presido from '../../assets/images/president.jpg';
 import Vice_Presido from '../../assets/images/vice.jpg';
-import Sec_Gen from '../../assets/images/president.jpg';
-import File_Icon from "../../assets/icons/file_icon.svg";
-import Bg3br from "../../assets/images/bg3-br.png";
-import Bg3_tl from "../../assets/images/bg3-tl.png";
+import Sec_Gen from '../../assets/images/secetary.jpg';
+import File_Icon from '../../assets/icons/file_icon.svg';
+import Bg3br from '../../assets/images/bg3-br.png';
+import Bg3_tl from '../../assets/images/bg3-tl.png';
 
 const Academics = () => {
   const [activeLevel, setActiveLevel] = useState("PG");
