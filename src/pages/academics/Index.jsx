@@ -70,6 +70,30 @@ const Academics = () => {
     setCurrentPage(1);
   };
 
+  const Excos = [
+    {
+      id: 1,
+      name: "Isah Fidelis Ojochide",
+      position: "President",
+      bio: '',
+      pic: Presido
+    },
+    {
+      id: 2,
+      name: "Isah Fidelis Ojochide",
+      position: "Vice President",
+      bio: '',
+      pic: Vice_Presido
+    },
+    {
+      id: 3,
+      name: "Akande Judah Oluwagbemiga",
+      position: "Secretary-General",
+      bio: '',
+      pic: Sec_Gen
+    },
+  ]
+
   return (
     <div className="relative font-[Inter]">
       <h1 className="absolute top-[-11rem] z-10 left-[-4rem] md:text-[11.5rem] xl:text-[16rem] font-bold text-[#0000001A] opacity-100 select-none w-full">
@@ -114,24 +138,18 @@ const Academics = () => {
                 key={index}
                 className="flex flex-col items-stretch gap-y-3 my-4 md:gap-y-4"
               >
-                <div className="flex gap-2 items-center bg-[#41A94E14] rounded-2xl border border-[#00000080] p-1 md:p-3 md:gap-6">
-                  <img
-                    src={File_Icon}
-                    alt="File Icon"
-                    className="w-10 md:w-24"
-                  />
-                  <div className="flex flex-col gap-1 md:gap-2">
-                    <p className="font-semibold text-[#41A94E] text-sm md:text-4xl">
-                      {course.code} - {course.title}
-                    </p>
-                    <button className="bg-black rounded-4xl text-white p-1 font-medium text-sm md:text-3xl">
-                      Download Now
-                    </button>
-                  </div>
+              <div className="flex gap-2 items-center bg-[#41A94E14] rounded-2xl border border-[#00000080] p-1 md:p-3 md:gap-6">
+                <img src={File_Icon} alt="File Icon" className="w-10 md:w-24" />
+                <div className="flex flex-col gap-1 md:gap-2">
+                  <p className="font-semibold text-[#41A94E] text-sm md:text-4xl">
+                    {course.code} - {course.title}
+                  </p>
+                  <button className="bg-black rounded-4xl text-white p-1 font-medium text-sm md:text-3xl">Download Now</button>
                 </div>
-                <button className="bg-[#41A94E] text-white rounded-4xl p-2 font-medium text-sm md:text-3xl">
-                  Download {course.code} Past Questions
-                </button>
+              </div>
+              <button className="bg-[#41A94E] text-white rounded-4xl p-2 font-medium text-sm md:text-3xl">
+                Download {course.code} Past Questions
+              </button>
               </article>
             ))}
             {totalPages > 1 && (
@@ -168,47 +186,15 @@ const Academics = () => {
           <h2 className='font-extrabold text-3xl lg:text-5xl'>Our Excos & Our Lecturers</h2>
           <p className="font-medium text-lg opacity-75 my-4 lg:text-2xl lg:w-[75%] lg:opacity-100">Meet our excos and lecturers</p>
           <div className="grid grid-cols-2 gap-x-8 lg:gap-x-28 md:grid-cols-3 lg:absolute w-full">
-            <div className="card">
-              <img src={Presido} alt="Exco" className="object-cover w-full md:h-48" />
-              <div className="p-4 bg-[#41A94E] text-center h-full">
-                <h3 className="font-bold text-black text-lg lg:text-2xl">
-                  Caleb Kim
-                </h3>
-                <p className="text-black text-xs lg:text-base">
-                  Dept. President
-                </p>
+            { Excos.map((exco) => (
+              <div className="card" key={exco.id} onClick={() => handleClick(exco)}>
+                <img src={exco.pic} alt={exco.name} className="object-cover w-full md:h-84" />
+                <div className="p-4 bg-[#41A94E] text-center h-full">
+                  <h3 className="font-bold text-black text-lg lg:text-2xl md:uppercase">{ exco.name }</h3>
+                  <p className="text-black text-xs lg:text-base">{ exco.position }</p>
+                </div>
               </div>
-            </div>
-            <div className="card">
-              <img
-                src={Caleb}
-                alt="Exco"
-                className="object-cover w-full md:h-48"
-              />
-              <div className="p-4 bg-[#41A94E] text-center h-full">
-                <h3 className="font-bold text-black text-lg lg:text-2xl">
-                  Caleb Kim
-                </h3>
-                <p className="text-black text-xs lg:text-base">
-                  Dept. President
-                </p>
-              </div>
-            </div>
-            <div className="card">
-              <img
-                src={Caleb}
-                alt="Exco"
-                className="object-cover w-full md:h-48"
-              />
-              <div className="p-4 bg-[#41A94E] text-center h-full">
-                <h3 className="font-bold text-black text-lg lg:text-2xl">
-                  Caleb Kim
-                </h3>
-                <p className="text-black text-xs lg:text-base">
-                  Dept. President
-                </p>
-              </div>
-            </div>
+            )) }
           </div>
         </div>
       </section>
