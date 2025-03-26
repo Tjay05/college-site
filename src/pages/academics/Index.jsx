@@ -76,21 +76,27 @@ const Academics = () => {
       name: "Isah Fidelis Ojochide",
       position: "President",
       bio: '',
-      pic: Presido
+      pic: Presido,
+      vision:'',
+      key_achievements: [],
     },
     {
       id: 2,
-      name: "Isah Fidelis Ojochide",
+      name: "Dagwom Hezekella Pam",
       position: "Vice President",
       bio: '',
-      pic: Vice_Presido
+      pic: Vice_Presido,
+      vision:'',
+      key_achievements: [],
     },
     {
       id: 3,
       name: "Akande Judah Oluwagbemiga",
       position: "Secretary-General",
       bio: '',
-      pic: Sec_Gen
+      pic: Sec_Gen,
+      vision:'',
+      key_achievements: [],
     },
   ]
 
