@@ -14,28 +14,55 @@ export const Excos = [
     id: 1,
     name: "Isah Fidelis Ojochide",
     position: "President",
-    bio: '',
+    bio: `
+      I am a distinguished historian from Ofu L.G.A Kogi State Nigeria, currently serving as a president of Great JUHISSA. 
+      
+      As President, I provide leadership and transitional vision to the department promoting academic excellence, research, technological advancement and community engagement. I am committed to mentoring students and inspiring the next generation of historians and international relations scholars.
+    `,
     pic: Presido,
-    vision:'',
-    key_achievements: [],
+    vision: 'The view of a digitalized JUHISSA',
+    key_achievements: [
+      'Secure donations of about 2,200 books to JUHISSA Library',
+      'Development of JUHISSA website',
+      'Effective management',
+      'Creation of JUHISSA podcast',
+      'Policy formulation'
+    ],
+    contact: "fidelisisah@gmail.com | 08100122200 / 09026233880"
   },
   {
     id: 2,
     name: "Dagwom Hezekella Pam",
     position: "Vice President",
-    bio: '',
+    bio: `
+      I am a 300-level student of History and International Studies Department, University of Jos. Born and raised in the scenic city of Jos, Plateau Stae.
+      I am a vibrant and passionate historian with a keen interest in international studies.
+      I am well-versed in critical thinking, research and analysis. My exceptional skills, both written and verbal, enable me to effectively convey complex ideas and inspire meaningful discussions.
+      My infectious enthusiasm, warm personality and generous spirit make me a beloved colleague and friend. My dedication to academic excellence, cultural awareness and communtiy engagement embodies the values of a true leader and scholar.
+    `,
     pic: Vice_Presido,
-    vision:'',
-    key_achievements: [],
+    vision: 'These initiatives demonstrate my commitment to creating an inclusive and supportive learning environment, where students can thrive and reach their full potential.',
+    key_achievements: [
+      'Providing visual aids, such as maps, to enhance teaching and facilitate better understanding of complex concepts.',
+      'Organizing tutorials for younger students, offering guidance and mentorship to help them navigate their academic journey.',
+      'Offering individual support to students who require additional assistance, addressing their unique needs and concerns.'
+    ],
+    contact: "pamhezekella8@gmail.com | 07012530644 / 08184295083"
   },
   {
     id: 3,
     name: "Akande Judah Oluwagbemiga",
     position: "Secretary-General",
-    bio: '',
+    bio: '400-level student of History and International Studies, dedicated to effective communication, organization and transparency.',
     pic: Sec_Gen,
-    vision:'',
-    key_achievements: [],
+    vision: '"ADROIT SECRETARIAT" - seamless communication, documentation and growth.',
+    key_achievements: [
+      'Organized and documented key meetings and events',
+      'Implemented efficient record keeping systems',
+      'Assisted in policy formulation and execution',
+      'Promoted student engagement and participation'
+    ],
+    contact: "dextyjay@gmail.com | 08135415376 / 09078625248"
   },
 ];
 
@@ -45,7 +72,7 @@ const Academics = () => {
   const handleClick = (exco) => {
     navigate(`../exco/${exco.id}`, { state: { exco } });
   };
-  
+
   const [activeLevel, setActiveLevel] = useState("PG");
   const [currentPage, setCurrentPage] = useState(1);
   const coursesPerPage = 2;
@@ -187,7 +214,7 @@ const Academics = () => {
       </section>
       <section
         id="excos"
-        className="bg-[#41A94E] relative my-16 py-8 lg:pb-58 lg:mb-70"
+        className="bg-[#41A94E] relative mt-16 py-8 lg:pb-58 lg:mb-70"
         style={{
           backgroundImage: `url(${Bg3_tl}), url(${Bg3br})`,
           backgroundPosition: "top left, bottom right",
@@ -203,8 +230,8 @@ const Academics = () => {
               <div className="card" key={exco.id} onClick={() => handleClick(exco)}>
                 <img src={exco.pic} alt={exco.name} className="object-cover w-full md:h-84" />
                 <div className="p-4 bg-[#41A94E] text-center h-full">
-                  <h3 className="font-bold text-black text-lg lg:text-2xl md:uppercase">{ exco.name }</h3>
-                  <p className="text-black text-xs lg:text-base">{ exco.position }</p>
+                  <h3 className="font-bold text-black text-base lg:text-2xl md:uppercase">{ exco.name }</h3>
+                  <p className="text-black text-sm lg:text-base">{ exco.position }</p>
                 </div>
               </div>
             )) }
