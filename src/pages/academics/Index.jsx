@@ -9,7 +9,43 @@ import File_Icon from '../../assets/icons/file_icon.svg';
 import Bg3br from '../../assets/images/bg3-br.png';
 import Bg3_tl from '../../assets/images/bg3-tl.png';
 
+export const Excos = [
+  {
+    id: 1,
+    name: "Isah Fidelis Ojochide",
+    position: "President",
+    bio: '',
+    pic: Presido,
+    vision:'',
+    key_achievements: [],
+  },
+  {
+    id: 2,
+    name: "Dagwom Hezekella Pam",
+    position: "Vice President",
+    bio: '',
+    pic: Vice_Presido,
+    vision:'',
+    key_achievements: [],
+  },
+  {
+    id: 3,
+    name: "Akande Judah Oluwagbemiga",
+    position: "Secretary-General",
+    bio: '',
+    pic: Sec_Gen,
+    vision:'',
+    key_achievements: [],
+  },
+];
+
 const Academics = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (exco) => {
+    navigate(`../exco/${exco.id}`, { state: { exco } });
+  };
+  
   const [activeLevel, setActiveLevel] = useState("PG");
   const [currentPage, setCurrentPage] = useState(1);
   const coursesPerPage = 2;
@@ -70,36 +106,6 @@ const Academics = () => {
     setActiveLevel(level);
     setCurrentPage(1);
   };
-
-  const Excos = [
-    {
-      id: 1,
-      name: "Isah Fidelis Ojochide",
-      position: "President",
-      bio: '',
-      pic: Presido,
-      vision:'',
-      key_achievements: [],
-    },
-    {
-      id: 2,
-      name: "Dagwom Hezekella Pam",
-      position: "Vice President",
-      bio: '',
-      pic: Vice_Presido,
-      vision:'',
-      key_achievements: [],
-    },
-    {
-      id: 3,
-      name: "Akande Judah Oluwagbemiga",
-      position: "Secretary-General",
-      bio: '',
-      pic: Sec_Gen,
-      vision:'',
-      key_achievements: [],
-    },
-  ]
 
   return (
     <div className="relative font-[Inter]">

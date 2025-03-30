@@ -9,6 +9,7 @@ import {
 
 import AppLayout from './layout/Index';
 import About from './pages/about/Index';
+import ExcoModal from './pages/academics/ExcoPopUp';
 import Academics from './pages/academics/Index';
 import Community from './pages/community/Index';
 import Home from './pages/home/Index';
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
         <Route index element={<Home/>}/>
         <Route path='About' element={<About/>}/>
         <Route path='Academics' element={<Academics/>}/>
+        <Route path='exco/:id' element={<ExcoModal/>}/>
         <Route path='Community' element={<Community/>}/>
         <Route path='Research' element={<Research_Project/>}/>
         <Route path='Profile' element={<Profile/>}/>
