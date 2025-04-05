@@ -7,65 +7,66 @@ import { FaFilePdf, FaFileWord } from "react-icons/fa";
 import Presido from "../../assets/images/president.jpg";
 import Vice_Presido from "../../assets/images/vice.jpg";
 import Sec_Gen from "../../assets/images/secetary.jpg";
+import { useNavigate } from "react-router-dom";
 
-  export const Excos = [
-    {
-      id: 1,
-      name: "Isah Fidelis Ojochide",
-      position: "President",
-      bio: `
+export const Excos = [
+  {
+    id: 1,
+    name: "Isah Fidelis Ojochide",
+    position: "President",
+    bio: `
       I am a distinguished historian from Ofu L.G.A Kogi State Nigeria, currently serving as a president of Great JUHISSA. 
       
       As President, I provide leadership and transitional vision to the department promoting academic excellence, research, technological advancement and community engagement. I am committed to mentoring students and inspiring the next generation of historians and international relations scholars.
     `,
-      pic: Presido,
-      vision: "The view of a digitalized JUHISSA",
-      key_achievements: [
-        "Secure donations of about 2,200 books to JUHISSA Library",
-        "Development of JUHISSA website",
-        "Effective management",
-        "Creation of JUHISSA podcast",
-        "Policy formulation"
-      ],
-      contact: "fidelisisah@gmail.com | 08100122200 / 09026233880"
-    },
-    {
-      id: 2,
-      name: "Dagwom Hezekella Pam",
-      position: "Vice President",
-      bio: `
+    pic: Presido,
+    vision: "The view of a digitalized JUHISSA",
+    key_achievements: [
+      "Secure donations of about 2,200 books to JUHISSA Library",
+      "Development of JUHISSA website",
+      "Effective management",
+      "Creation of JUHISSA podcast",
+      "Policy formulation"
+    ],
+    contact: "fidelisisah@gmail.com | 08100122200 / 09026233880"
+  },
+  {
+    id: 2,
+    name: "Dagwom Hezekella Pam",
+    position: "Vice President",
+    bio: `
       I am a 300-level student of History and International Studies Department, University of Jos. Born and raised in the scenic city of Jos, Plateau Stae.
       I am a vibrant and passionate historian with a keen interest in international studies.
       I am well-versed in critical thinking, research and analysis. My exceptional skills, both written and verbal, enable me to effectively convey complex ideas and inspire meaningful discussions.
       My infectious enthusiasm, warm personality and generous spirit make me a beloved colleague and friend. My dedication to academic excellence, cultural awareness and communtiy engagement embodies the values of a true leader and scholar.
     `,
-      pic: Vice_Presido,
-      vision:
-        "These initiatives demonstrate my commitment to creating an inclusive and supportive learning environment, where students can thrive and reach their full potential.",
-      key_achievements: [
-        "Providing visual aids, such as maps, to enhance teaching and facilitate better understanding of complex concepts.",
-        "Organizing tutorials for younger students, offering guidance and mentorship to help them navigate their academic journey.",
-        "Offering individual support to students who require additional assistance, addressing their unique needs and concerns."
-      ],
-      contact: "pamhezekella8@gmail.com | 07012530644 / 08184295083"
-    },
-    {
-      id: 3,
-      name: "Akande Judah Oluwagbemiga",
-      position: "Secretary-General",
-      bio: "400-level student of History and International Studies, dedicated to effective communication, organization and transparency.",
-      pic: Sec_Gen,
-      vision:
-        '"ADROIT SECRETARIAT" - seamless communication, documentation and growth.',
-      key_achievements: [
-        "Organized and documented key meetings and events",
-        "Implemented efficient record keeping systems",
-        "Assisted in policy formulation and execution",
-        "Promoted student engagement and participation"
-      ],
-      contact: "dextyjay@gmail.com | 08135415376 / 09078625248"
-    }
-  ];
+    pic: Vice_Presido,
+    vision:
+      "These initiatives demonstrate my commitment to creating an inclusive and supportive learning environment, where students can thrive and reach their full potential.",
+    key_achievements: [
+      "Providing visual aids, such as maps, to enhance teaching and facilitate better understanding of complex concepts.",
+      "Organizing tutorials for younger students, offering guidance and mentorship to help them navigate their academic journey.",
+      "Offering individual support to students who require additional assistance, addressing their unique needs and concerns."
+    ],
+    contact: "pamhezekella8@gmail.com | 07012530644 / 08184295083"
+  },
+  {
+    id: 3,
+    name: "Akande Judah Oluwagbemiga",
+    position: "Secretary-General",
+    bio: "400-level student of History and International Studies, dedicated to effective communication, organization and transparency.",
+    pic: Sec_Gen,
+    vision:
+      '"ADROIT SECRETARIAT" - seamless communication, documentation and growth.',
+    key_achievements: [
+      "Organized and documented key meetings and events",
+      "Implemented efficient record keeping systems",
+      "Assisted in policy formulation and execution",
+      "Promoted student engagement and participation"
+    ],
+    contact: "dextyjay@gmail.com | 08135415376 / 09078625248"
+  }
+];
 
 const Academics = () => {
   const [activeLevel, setActiveLevel] = useState("100");
@@ -75,8 +76,6 @@ const Academics = () => {
   const coursesPerPage = 12; // Changed to 12 for better grid layout (4x3)
 
   const levels = ["100", "200", "300", "400", "PDF Books"];
-
-
 
   // Load course materials from the folder structure
   useEffect(() => {
@@ -193,6 +192,7 @@ const Academics = () => {
       alert("Failed to download file. Please try again later.");
     }
   };
+  const navigate = useNavigate();
 
   // Function to render the appropriate icon based on file type
   const getFileIcon = (fileType) => {
@@ -204,6 +204,10 @@ const Academics = () => {
       default:
         return <FaFilePdf className="w-8 h-8 text-red-600" />;
     }
+  };
+
+  const handleClick = (exco) => {
+    navigate(`../exco/${exco.id}`, { state: { exco } });
   };
 
   return (
