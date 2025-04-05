@@ -73,7 +73,7 @@ const Academics = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [courseData, setCourseData] = useState({});
   const [loading, setLoading] = useState(true);
-  const coursesPerPage = 12; // Changed to 12 for better grid layout (4x3)
+  const coursesPerPage = 8; // Changed to 12 for better grid layout (4x3)
 
   const levels = ["100", "200", "300", "400", "PDF Books"];
 
