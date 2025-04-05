@@ -3,7 +3,69 @@ import CourseMaterials from "../../assets/images/past-questions.png";
 import Caleb from "../../assets/images/exco.png";
 import Bg3br from "../../assets/images/bg3-br.png";
 import Bg3_tl from "../../assets/images/bg3-tl.png";
-import { FaFilePdf, FaFileWord, FaDownload } from "react-icons/fa";
+import { FaFilePdf, FaFileWord } from "react-icons/fa";
+import Presido from "../../assets/images/president.jpg";
+import Vice_Presido from "../../assets/images/vice.jpg";
+import Sec_Gen from "../../assets/images/secetary.jpg";
+
+  export const Excos = [
+    {
+      id: 1,
+      name: "Isah Fidelis Ojochide",
+      position: "President",
+      bio: `
+      I am a distinguished historian from Ofu L.G.A Kogi State Nigeria, currently serving as a president of Great JUHISSA. 
+      
+      As President, I provide leadership and transitional vision to the department promoting academic excellence, research, technological advancement and community engagement. I am committed to mentoring students and inspiring the next generation of historians and international relations scholars.
+    `,
+      pic: Presido,
+      vision: "The view of a digitalized JUHISSA",
+      key_achievements: [
+        "Secure donations of about 2,200 books to JUHISSA Library",
+        "Development of JUHISSA website",
+        "Effective management",
+        "Creation of JUHISSA podcast",
+        "Policy formulation"
+      ],
+      contact: "fidelisisah@gmail.com | 08100122200 / 09026233880"
+    },
+    {
+      id: 2,
+      name: "Dagwom Hezekella Pam",
+      position: "Vice President",
+      bio: `
+      I am a 300-level student of History and International Studies Department, University of Jos. Born and raised in the scenic city of Jos, Plateau Stae.
+      I am a vibrant and passionate historian with a keen interest in international studies.
+      I am well-versed in critical thinking, research and analysis. My exceptional skills, both written and verbal, enable me to effectively convey complex ideas and inspire meaningful discussions.
+      My infectious enthusiasm, warm personality and generous spirit make me a beloved colleague and friend. My dedication to academic excellence, cultural awareness and communtiy engagement embodies the values of a true leader and scholar.
+    `,
+      pic: Vice_Presido,
+      vision:
+        "These initiatives demonstrate my commitment to creating an inclusive and supportive learning environment, where students can thrive and reach their full potential.",
+      key_achievements: [
+        "Providing visual aids, such as maps, to enhance teaching and facilitate better understanding of complex concepts.",
+        "Organizing tutorials for younger students, offering guidance and mentorship to help them navigate their academic journey.",
+        "Offering individual support to students who require additional assistance, addressing their unique needs and concerns."
+      ],
+      contact: "pamhezekella8@gmail.com | 07012530644 / 08184295083"
+    },
+    {
+      id: 3,
+      name: "Akande Judah Oluwagbemiga",
+      position: "Secretary-General",
+      bio: "400-level student of History and International Studies, dedicated to effective communication, organization and transparency.",
+      pic: Sec_Gen,
+      vision:
+        '"ADROIT SECRETARIAT" - seamless communication, documentation and growth.',
+      key_achievements: [
+        "Organized and documented key meetings and events",
+        "Implemented efficient record keeping systems",
+        "Assisted in policy formulation and execution",
+        "Promoted student engagement and participation"
+      ],
+      contact: "dextyjay@gmail.com | 08135415376 / 09078625248"
+    }
+  ];
 
 const Academics = () => {
   const [activeLevel, setActiveLevel] = useState("100");
@@ -14,19 +76,18 @@ const Academics = () => {
 
   const levels = ["100", "200", "300", "400", "PDF Books"];
 
+
+
   // Load course materials from the folder structure
   useEffect(() => {
     const loadCourseData = async () => {
       try {
         setLoading(true);
 
-        // We need to import the course data dynamically or use a context
-        // For now, let's simulate fetching the data
         const courseModules = import.meta.glob(
           "../../assets/course upload/**/*"
         );
 
-        // Structure to hold our organized course data
         const organizedData = {
           100: [],
           200: [],
@@ -35,7 +96,6 @@ const Academics = () => {
           "PDF Books": []
         };
 
-        // Process the imported modules
         for (const path in courseModules) {
           // Process path to determine level and course information
           const pathParts = path.split("/");
@@ -193,7 +253,7 @@ const Academics = () => {
             {loading ? (
               <p className="text-center py-8">Loading course materials...</p>
             ) : currentCourses.length > 0 ? (
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {currentCourses.map((course, index) => (
                   <div
                     key={index}
@@ -229,12 +289,12 @@ const Academics = () => {
 
                     <div className="p-3 pt-0">
                       <button
-                        className="bg-[#41A94E] text-white rounded-full py-2 px-4 w-full font-medium text-sm hover:bg-[#368B40] transition-colors duration-300 flex items-center justify-center gap-2"
+                        className="bg-[#41A94E] text-white rounded-full py-2 px-4 w-full font-medium text-sm hover:bg-[#368B40] transition-colors duration-300"
                         onClick={() =>
                           handleDownload(course.filePath, course.fileName)
                         }
                       >
-                        <FaDownload className="text-white" /> Download
+                        Download
                       </button>
                     </div>
                   </div>
@@ -270,10 +330,10 @@ const Academics = () => {
         </div>
       </section>
 
-      {/* Excos & Lecturers section - Modified to 4x2 grid */}
+      {/* Excos & Lecturers section */}
       <section
         id="excos"
-        className="bg-[#41A94E] relative my-16 py-12 lg:py-16"
+        className="bg-[#41A94E] relative mt-16 py-8 lg:pb-58 lg:mb-70"
         style={{
           backgroundImage: `url(${Bg3_tl}), url(${Bg3br})`,
           backgroundPosition: "top left, bottom right",
@@ -281,44 +341,32 @@ const Academics = () => {
           backgroundSize: "7%, 15%"
         }}
       >
-        <div className="rule text-white font-[Inter] text-center lg:text-left">
-          <h2 className="font-extrabold text-3xl lg:text-5xl mb-4">
+        <div className="rule text-white font-[Inter] text-center lg:text-left relative">
+          <h2 className="font-extrabold text-3xl lg:text-5xl">
             Our Excos & Our Lecturers
           </h2>
-          <p className="font-medium text-lg opacity-75 mb-8 lg:text-2xl lg:w-[75%] lg:opacity-100">
+          <p className="font-medium text-lg opacity-75 my-4 lg:text-2xl lg:w-[75%] lg:opacity-100">
             Meet our excos and lecturers
           </p>
-
-          {/* Excos grid with 4x2 layout (4 columns on larger screens, 2 rows) */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
-            {/* Only 8 items to create a 4x2 grid */}
-            {[
-              { name: "Caleb Kim", role: "Dept. President" },
-              { name: "Jennifer Smith", role: "Vice President" },
-              { name: "David Chen", role: "General Secretary" },
-              { name: "Amina Patel", role: "Financial Secretary" },
-              { name: "Marcus Johnson", role: "P.R.O" },
-              { name: "Sophia Rodriguez", role: "Academic Coordinator" },
-              { name: "Taiwo Adebayo", role: "Social Director" },
-              { name: "Grace Liu", role: "Welfare Director" }
-            ].map((person, index) => (
+          <div className="grid grid-cols-2 gap-x-8 lg:gap-x-28 md:grid-cols-3 lg:absolute w-full">
+            {Excos.map((exco) => (
               <div
-                key={index}
-                className="bg-white rounded-xl overflow-hidden shadow-lg transform transition-transform hover:scale-105"
+                className="card"
+                key={exco.id}
+                onClick={() => handleClick(exco)}
               >
-                <div className="relative">
-                  <img
-                    src={Caleb}
-                    alt={`Exco - ${person.name}`}
-                    className="object-cover w-full h-48"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                </div>
-                <div className="p-4 bg-white text-center">
-                  <h3 className="font-bold text-[#41A94E] text-lg">
-                    {person.name}
+                <img
+                  src={exco.pic}
+                  alt={exco.name}
+                  className="object-cover w-full md:h-84"
+                />
+                <div className="p-4 bg-[#41A94E] text-center h-full">
+                  <h3 className="font-bold text-black text-base lg:text-2xl md:uppercase">
+                    {exco.name}
                   </h3>
-                  <p className="text-gray-700 text-sm">{person.role}</p>
+                  <p className="text-black text-sm lg:text-base">
+                    {exco.position}
+                  </p>
                 </div>
               </div>
             ))}

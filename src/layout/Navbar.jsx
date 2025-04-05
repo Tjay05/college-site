@@ -26,6 +26,7 @@ const Navbar = () => {
   !location.pathname.includes('Academics') &&
   !location.pathname.includes('Community') &&
   !location.pathname.includes('Research') && 
+  !location.pathname.includes('exco') && 
   !location.pathname.includes('Profile');
 
   return (

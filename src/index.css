@@ -51,7 +51,7 @@
 }
 
 .card {
-  @apply rounded-2xl overflow-hidden shadow-2xl my-8
+  @apply rounded-2xl overflow-hidden shadow-2xl my-8 hover:cursor-pointer
 }
 
 .card_pic {
