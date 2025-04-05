@@ -157,7 +157,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="rule font-[Inter] border border-black p-6 my-16 rounded-4xl bg-white md:flex items-stretch md:my-28 md:p-8 md:gap-8">
+        {/* <section className="rule font-[Inter] border border-black p-6 my-16 rounded-4xl bg-white md:flex items-stretch md:my-28 md:p-8 md:gap-8">
           <div className="bg-[#41A94E] text-white p-5 rounded-2xl mb-4 md:w-[40%]">
             <p className="uppercase font-semibold text-lg md:text-xl">Connect with us</p>
             <h2 className="font-bold my-2 text-xl md:text-2xl lg:text-4xl">Experience the Full Potential of Our College Department</h2>
@@ -208,7 +208,7 @@ const Home = () => {
             </div>
             <button className='border-3 border-[#41A94E] rounded-4xl py-2 text-[#41A94E] font-semibold text-lg w-1/2 place-self-center col-span-2 cursor-pointer md:text-2xl'>Contact Us</button>
           </form>
-        </section>
+        </section> */}
       </div>
       {isModalOpen && (
         <AccountPopup/>

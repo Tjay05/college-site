@@ -306,7 +306,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="rule font-[Inter] border border-black p-6 my-16 rounded-4xl bg-white md:flex items-stretch md:my-28 md:p-8 md:gap-8">
+      {/* <section className="rule font-[Inter] border border-black p-6 my-16 rounded-4xl bg-white md:flex items-stretch md:my-28 md:p-8 md:gap-8">
         <div className="bg-[#41A94E] text-white p-5 rounded-2xl mb-4 md:w-[40%]">
           <p className="uppercase font-semibold text-lg md:text-xl">
             Connect with us
@@ -392,7 +392,7 @@ const About = () => {
             Contact Us
           </button>
         </form>
-      </section>
+      </section> */}
     </div>
   );
 }

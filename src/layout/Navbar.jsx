@@ -32,7 +32,7 @@ const Navbar = () => {
     <div className="relative">
       <nav className="bg-[#1E1E1E] relative">
         <div className="flex justify-between items-center rule py-3 md:py-2">
-          <p className="text-[#41A94E] font-[Inter] font-semibold text-xl md:text-2xl">College Dept.</p>
+          <p className="text-[#41A94E] font-[Inter] font-semibold text-xl md:text-2xl">History and International Relations</p>
           {/* Hamburger Menu */}
           {isMobile && (
             <div
@@ -64,7 +64,7 @@ const Navbar = () => {
               <NavLink className="links" to="Research">Research & Projects</NavLink>
             </li>
           </ul>
-          { isPageRoute && (
+          {/* { isPageRoute && (
             <div className="hidden md:flex gap-4 text-sm md:text-[16px]">
               <button onClick={() => setIsModalOpen(true)} className="border border-white text-white px-3 py-1.5">Sign Up</button>
               <button onClick={() => setIsLoginModalOpen(true)} className="text-[#1E1E1E] border bg-white px-3 py-1.5">Login</button>
@@ -75,7 +75,7 @@ const Navbar = () => {
               <p className="text-white text-lg">No Profile</p>
               <span className="bg-white text-[#1E1E1E] px-2.5 py-2 rounded-full text-lg">NP</span>
             </NavLink>
-          )}
+          )} */}
         </div>
         {/* Mobile Nav */}
         {isMobile && (
@@ -95,7 +95,7 @@ const Navbar = () => {
             <li className="nav_link">
               <NavLink onClick={handleNavToggle} className="links" to="Research">Research & Projects</NavLink>
             </li>
-            { isPageRoute && (
+            {/* { isPageRoute && (
               <>
                 <li className="nav_link my-2">
                   <button onClick={() => {
@@ -110,13 +110,13 @@ const Navbar = () => {
                   }} className="text-[#1E1E1E] border bg-white px-7 py-2 cursor-pointer" to="">Login</button>
                 </li>
               </>
-            )}
-            { !isPageRoute && (
+            )} */}
+            {/* { !isPageRoute && (
             <NavLink onClick={handleNavToggle}  to='Profile' className="font-semibold flex gap-4 items-center font-[Outfit] my-2 profile_link">
               <p className="text-white text-lg">No Profile</p>
               <span className="bg-white text-[#1E1E1E] px-2.5 py-2 rounded-full text-lg">NP</span>
             </NavLink>
-          )}
+          )} */}
           </ul>
         )}
       </nav>
