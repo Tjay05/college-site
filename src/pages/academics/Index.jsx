@@ -179,7 +179,9 @@ const Academics = () => {
     try {
       // For dynamic imports, we need to load the file first
       const fileModule = await import(/* @vite-ignore */ filePath);
-      const fileUrl = fileModule.default;
+    const fileUrl = `/course upload/100l/${fileName}`;
+    // then download
+
 
       // Create a download link and trigger the download
       const link = document.createElement("a");
