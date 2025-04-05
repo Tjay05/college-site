@@ -1,1 +1,1 @@
-# History and International Relations
+# History and International Studies

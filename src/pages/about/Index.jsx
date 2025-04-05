@@ -141,7 +141,7 @@ const About = () => {
           partnerships with research institutions, universities, and
           professional associations both within Nigeria and abroad, facilitating
           intellectual exchange and collaboration. In keeping with its mission
-          to advance the study of history and international relations, the
+          to advance the study of History and International Studies, the
           department regularly organizes conferences, seminars, and workshops
           that bring together scholars, policymakers, and students to discuss
           pressing historical and contemporary issues. These events provide a

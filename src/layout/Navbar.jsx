@@ -33,7 +33,7 @@ const Navbar = () => {
     <div className="relative">
       <nav className="bg-[#1E1E1E] relative">
         <div className="flex justify-between items-center rule py-3 md:py-2">
-          <p className="text-[#41A94E] font-[Inter] font-semibold text-xl md:text-2xl">History and International Relations</p>
+          <p className="text-[#41A94E] font-[Inter] font-semibold text-xl md:text-2xl">History and International Studies</p>
           {/* Hamburger Menu */}
           {isMobile && (
             <div
