@@ -8,6 +8,7 @@ import Presido from "../../assets/images/president.jpg";
 import Vice_Presido from "../../assets/images/vice.jpg";
 import Sec_Gen from "../../assets/images/secetary.jpg";
 import { useNavigate } from "react-router-dom";
+// import test from '../../../public/course upload'
 
 export const Excos = [
   {
@@ -84,7 +85,7 @@ const Academics = () => {
         setLoading(true);
 
         const courseModules = import.meta.glob(
-          "../../assets/course upload/**/*"
+          "../../../public/course upload/**/*"
         );
 
         const organizedData = {
