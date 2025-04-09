@@ -70,16 +70,15 @@ export const Excos = [
 ];
 
 const Academics = () => {
-  const [activeLevel, setActiveLevel] = useState("100");
+  const [activeLevel, setActiveLevel] = useState("100l");
   const [currentPage, setCurrentPage] = useState(1);
   const [courseData, setCourseData] = useState({});
   const [loading, setLoading] = useState(true);
-  const coursesPerPage = 8; // Changed to 12 for better grid layout (4x3)
+  const coursesPerPage = 8; // Changed to 8 for better grid layout
 
   const levels = ["100l", "200l", "300l", "400l", "PDF Books"];
 
   // Load course materials from the folder structure
-  // Replace your current useEffect with this approach
   useEffect(() => {
     const loadCourseData = async () => {
       try {
@@ -88,29 +87,21 @@ const Academics = () => {
         // Fetch the JSON manifest of your files
         const response = await fetch("/course-manifest.json");
         const data = await response.json();
-        console.log(data);
+        console.log("Fetched course data:", data);
         const courseFiles = data.courseFiles;
 
         const organizedData = {
-          100: [],
-          200: [],
-          300: [],
-          400: [],
+          "100l": [],
+          "200l": [],
+          "300l": [],
+          "400l": [],
           "PDF Books": []
         };
 
         courseFiles.forEach((file) => {
           const { path, level, fileName } = file;
 
-          // Map the level from the file (e.g., "100l") to the key in organizedData (e.g., "100")
-          let normalizedLevel;
-          if (level === "100l") normalizedLevel = "100";
-          else if (level === "200l") normalizedLevel = "200";
-          else if (level === "300l") normalizedLevel = "300";
-          else if (level === "400l") normalizedLevel = "400";
-          else normalizedLevel = level;
-
-          if (normalizedLevel in organizedData) {
+          if (level in organizedData) {
             const fileExtension = fileName.split(".").pop().toLowerCase();
             const fileType =
               fileExtension === "pdf"
@@ -126,7 +117,7 @@ const Academics = () => {
               ? courseName.replace(codeMatch[0], "").replace(/^[-\s]+/, "")
               : "";
 
-            organizedData[normalizedLevel].push({
+            organizedData[level].push({
               code,
               title,
               filePath: path, // Using the actual path from your data
@@ -251,7 +242,7 @@ const Academics = () => {
           <div className="my-4 w-full">
             {loading ? (
               <p className="text-center py-8">Loading course materials...</p>
-            ) : currentCourses.length > 0 ? (
+            ) : currentCourses && currentCourses.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {currentCourses.map((course, index) => (
                   <div
