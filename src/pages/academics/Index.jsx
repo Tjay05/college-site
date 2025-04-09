@@ -79,14 +79,16 @@ const Academics = () => {
   const levels = ["100", "200", "300", "400", "PDF Books"];
 
   // Load course materials from the folder structure
+  // Replace your current useEffect with this approach
   useEffect(() => {
     const loadCourseData = async () => {
       try {
         setLoading(true);
 
-        const courseModules = import.meta.glob(
-          "../../../public/course upload/**/*"
-        );
+        // This is the key change - fetch a JSON manifest of your files instead
+        // Create this JSON file that maps all your course materials
+        const response = await fetch("/course-materials-manifest.json");
+        const courseFiles = await response.json();
 
         const organizedData = {
           100: [],
@@ -96,26 +98,10 @@ const Academics = () => {
           "PDF Books": []
         };
 
-        for (const path in courseModules) {
-          // Process path to determine level and course information
-          const pathParts = path.split("/");
-          const fileName = pathParts[pathParts.length - 1];
+        courseFiles.forEach((file) => {
+          const { path, level, fileName } = file;
 
-          // Determine level based on path
-          let level = null;
-          if (path.includes("100l")) {
-            level = "100";
-          } else if (path.includes("200l")) {
-            level = "200";
-          } else if (path.includes("300l")) {
-            level = "300";
-          } else if (path.includes("400l")) {
-            level = "400";
-          } else if (path.includes("Relevant pdf Books")) {
-            level = "PDF Books";
-          }
-
-          if (level) {
+          if (levels.includes(level)) {
             const fileExtension = fileName.split(".").pop().toLowerCase();
             const fileType =
               fileExtension === "pdf"
@@ -124,8 +110,7 @@ const Academics = () => {
                 ? "word"
                 : "other";
 
-            const courseName = fileName.split(".")[0]; // Remove file extension
-            // Extract course code and title (assuming format like "COR 101 - Course Title")
+            const courseName = fileName.split(".")[0];
             const codeMatch = courseName.match(/^([A-Z]+ \d+)/);
             const code = codeMatch ? codeMatch[0] : courseName;
             const title = codeMatch
@@ -133,14 +118,14 @@ const Academics = () => {
               : "";
 
             organizedData[level].push({
-              code: code,
-              title: title,
-              filePath: path, // This will be the path to the file
-              fileName: fileName,
-              fileType: fileType
+              code,
+              title,
+              filePath: path, // This should be the public URL path
+              fileName,
+              fileType
             });
           }
-        }
+        });
 
         setCourseData(organizedData);
         setLoading(false);
@@ -179,9 +164,8 @@ const Academics = () => {
     try {
       // For dynamic imports, we need to load the file first
       const fileModule = await import(/* @vite-ignore */ filePath);
-    const fileUrl = `/course upload/100l/${fileName}`;
-    // then download
-
+      const fileUrl = `/course upload/100l/${fileName}`;
+      // then download
 
       // Create a download link and trigger the download
       const link = document.createElement("a");
