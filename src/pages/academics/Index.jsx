@@ -76,7 +76,7 @@ const Academics = () => {
   const [loading, setLoading] = useState(true);
   const coursesPerPage = 8; // Changed to 12 for better grid layout (4x3)
 
-  const levels = ["100", "200", "300", "400", "PDF Books"];
+  const levels = ["100l", "200l", "300l", "400l", "PDF Books"];
 
   // Load course materials from the folder structure
   // Replace your current useEffect with this approach
@@ -85,10 +85,11 @@ const Academics = () => {
       try {
         setLoading(true);
 
-        // This is the key change - fetch a JSON manifest of your files instead
-        // Create this JSON file that maps all your course materials
-        const response = await fetch("/course-materials-manifest.json");
-        const courseFiles = await response.json();
+        // Fetch the JSON manifest of your files
+        const response = await fetch("/course-manifest.json");
+        const data = await response.json();
+        console.log(data);
+        const courseFiles = data.courseFiles;
 
         const organizedData = {
           100: [],
@@ -101,7 +102,15 @@ const Academics = () => {
         courseFiles.forEach((file) => {
           const { path, level, fileName } = file;
 
-          if (levels.includes(level)) {
+          // Map the level from the file (e.g., "100l") to the key in organizedData (e.g., "100")
+          let normalizedLevel;
+          if (level === "100l") normalizedLevel = "100";
+          else if (level === "200l") normalizedLevel = "200";
+          else if (level === "300l") normalizedLevel = "300";
+          else if (level === "400l") normalizedLevel = "400";
+          else normalizedLevel = level;
+
+          if (normalizedLevel in organizedData) {
             const fileExtension = fileName.split(".").pop().toLowerCase();
             const fileType =
               fileExtension === "pdf"
@@ -117,10 +126,10 @@ const Academics = () => {
               ? courseName.replace(codeMatch[0], "").replace(/^[-\s]+/, "")
               : "";
 
-            organizedData[level].push({
+            organizedData[normalizedLevel].push({
               code,
               title,
-              filePath: path, // This should be the public URL path
+              filePath: path, // Using the actual path from your data
               fileName,
               fileType
             });
@@ -162,10 +171,8 @@ const Academics = () => {
   // Handle file download
   const handleDownload = async (filePath, fileName) => {
     try {
-      // For dynamic imports, we need to load the file first
-      const fileModule = await import(/* @vite-ignore */ filePath);
-      const fileUrl = `/course upload/100l/${fileName}`;
-      // then download
+      // Use the actual path from your data instead of hardcoding
+      const fileUrl = filePath;
 
       // Create a download link and trigger the download
       const link = document.createElement("a");
@@ -179,6 +186,7 @@ const Academics = () => {
       alert("Failed to download file. Please try again later.");
     }
   };
+
   const navigate = useNavigate();
 
   // Function to render the appropriate icon based on file type
