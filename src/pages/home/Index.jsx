@@ -1,13 +1,15 @@
-import lapGuy from "../../assets/images/laptop-guy.png";
+import lapGuy from "../../assets/images/students.jpg";
 import Bg1_tl from "../../assets/images/green-bg1tl.png";
 import Bg1br from "../../assets/images/green-bg1br.png";
 import Bg2_tl from "../../assets/images/bg2-tl.png";
 import Bg2br from "../../assets/images/bg2-br.png";
 import Bg3br from "../../assets/images/bg3-br.png";
 import Bg3_tl from "../../assets/images/bg3-tl.png";
-import NewsPaper from "../../assets/images/newspaper-girl.png";
+import NewsPaper from "../../assets/images/single student.jpg";
 import Afro_Guy from "../../assets/images/afro-guy.png";
-import ResourceGroup from "../../assets/images/resources-group.png";
+import ResourceGroup from "../../assets/images/students 2.jpg";
+import ResourceGroup2 from "../../assets/images/students 3.jpg";
+import ResourceGroup3 from "../../assets/images/student 4.jpg";
 import CommunityGuy from "../../assets/images/community-guy.png";
 import Curriculum from "../../assets/icons/structured-curriculum.svg";
 import Faculty from "../../assets/icons/dedicated-support.svg";
@@ -39,18 +41,18 @@ const Home = () => {
           }}
         >
           <div className="rule lg:flex flex-row-reverse justify-between items-center">
-            <img className="w-full lg:w-[40%]" src={lapGuy} alt="" />
+            <img className="w-full rounded-3xl lg:w-[40%]" src={lapGuy} alt="" />
             <div className="flex flex-col font-[Inter] text-white text-center my-4 lg:w-[55%] lg:text-left">
               <h1 className="heading">Enhance Your Academic Journey</h1>
               <p className="text-[#333333] heading">Unlock Your Potential</p>
-              <p className="heading">Join Our Vibrant Community</p>
+              {/* <p className="heading">Join Our Vibrant Community</p> */}
               <p className="font-semibold my-2 lg:text-xl lg:w-3/4 lg:my-5">
                 Experience excellence and innovation with a department dedicated
                 to enriching your academic journey.
               </p>
-              <button className="bg-[#333333] rounded-4xl self-center px-5 text-lg font-semibold my-4 py-3 cursor-pointer lg:self-baseline lg:text-xl">
+              {/* <button className="bg-[#333333] rounded-4xl self-center px-5 text-lg font-semibold my-4 py-3 cursor-pointer lg:self-baseline lg:text-xl">
                 Connect With Us
-              </button>
+              </button> */}
             </div>
           </div>
         </header>
@@ -206,7 +208,7 @@ const Home = () => {
               </div>
               <div className="card">
                 <img
-                  src={ResourceGroup}
+                  src={ResourceGroup2}
                   alt="Resources Group"
                   className="card_pic"
                 />
@@ -222,7 +224,7 @@ const Home = () => {
               </div>
               <div className="card">
                 <img
-                  src={ResourceGroup}
+                  src={ResourceGroup3}
                   alt="Resources Group"
                   className="card_pic"
                 />
