@@ -618,7 +618,7 @@ const Academics = () => {
       {/* Excos & Lecturers section */}
       <section
         id="excos"
-        className="bg-[#41A94E] relative mt-16 py-8 lg:pb-58 lg:mb-70"
+        className="bg-[#41A94E] relative mt-16 py-8 lg:pb-58 lg:mb-70 my-5"
         style={{
           backgroundImage: `url(${Bg3_tl}), url(${Bg3br})`,
           backgroundPosition: "top left, bottom right",
