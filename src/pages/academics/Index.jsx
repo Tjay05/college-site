@@ -618,7 +618,7 @@ const Academics = () => {
       {/* Excos & Lecturers section */}
       <section
         id="excos"
-        className="bg-[#41A94E] relative mt-16 py-8 lg:pb-58 lg:mb-70 my-5"
+        className="bg-[#41A94E] relative mt-16 py-8 lg:py-20 my-5"
         style={{
           backgroundImage: `url(${Bg3_tl}), url(${Bg3br})`,
           backgroundPosition: "top left, bottom right",
@@ -626,243 +626,238 @@ const Academics = () => {
           backgroundSize: "7%, 15%"
         }}
       >
-        <div className="rule text-white font-[Inter] text-center lg:text-left relative">
-          <h2 className="font-extrabold text-3xl lg:text-5xl">
+        <div className="rule text-white font-[Inter] text-center lg:text-left container mx-auto px-4">
+          <h2 className="font-extrabold text-3xl lg:text-5xl mb-8">
             Our Excos & Our Lecturers
           </h2>
-          {/* <p className="font-medium text-lg opacity-75 my-4 lg:text-2xl lg:w-[75%] lg:opacity-100">
-            Meet our excos and lecturers
-          </p> */}
-          <div className="grid grid-cols-2 gap-x-8 lg:gap-x-28 md:grid-cols-3 lg:absolute w-full">
-            {Excos.map((exco) => (
-              <div
-                className="card"
-                key={exco.id}
-                onClick={() => handleClick(exco)}
-              >
-                <img
-                  src={exco.pic}
-                  alt={exco.name}
-                  className="object-cover w-full md:h-84"
-                />
-                <div className="p-4 bg-[#41A94E] text-center h-full">
-                  <h3 className="font-bold text-black text-base lg:text-2xl md:uppercase">
-                    {exco.name}
-                  </h3>
-                  <p className="text-black text-sm lg:text-base">
-                    {exco.position}
-                  </p>
+
+          {/* Excos Section */}
+          <div className="mb-16">
+            <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-6 lg:gap-x-8 md:grid-cols-3">
+              {Excos.map((exco) => (
+                <div
+                  className="card cursor-pointer"
+                  key={exco.id}
+                  onClick={() => handleClick(exco)}
+                >
+                  <img
+                    src={exco.pic}
+                    alt={exco.name}
+                    className="object-cover w-full h-64 md:h-72"
+                  />
+                  <div className="p-4 bg-[#41A94E] text-center">
+                    <h3 className="font-bold text-black text-base lg:text-2xl md:uppercase">
+                      {exco.name}
+                    </h3>
+                    <p className="text-black text-sm lg:text-base">
+                      {exco.position}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          {/* Lecturers Section */}
+          <div className="mt-12">
+            <div className="grid grid-cols-2 gap-4 md:gap-6 md:grid-cols-3">
+              {Lecturers.map((lecturer) => (
+                <div
+                  className="card overflow-hidden rounded-lg shadow-lg cursor-pointer transition-transform hover:scale-105"
+                  key={lecturer.id}
+                  onClick={() => handleClicked(lecturer)}
+                >
+                  <div className="relative h-64 overflow-hidden">
+                    <img
+                      src={lecturer.pic || "/api/placeholder/400/320"}
+                      alt={lecturer.name}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div className="p-4 bg-[#41A94E] text-center">
+                    <h3 className="font-bold text-black text-lg md:text-xl">
+                      {lecturer.name}
+                    </h3>
+                    <div className="flex items-center justify-center mt-2">
+                      <p className="text-black text-sm">{lecturer.position}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="relative">
-          <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 p-2 md:grid-cols-3 lg:w-full">
-            {Lecturers.map((lecturer) => (
-              <div
-                className="card overflow-hidden rounded-lg shadow-lg cursor-pointer transition-transform hover:scale-105"
-                key={lecturer.id}
-                onClick={() => handleClicked(lecturer)}
-              >
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={lecturer.pic || "/api/placeholder/400/320"}
-                    alt={lecturer.name}
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-                <div className="p-4 bg-[#41A94E]  text-center">
-                  <h3 className="font-bold text-black text-lg md:text-xl">
-                    {lecturer.name}
-                  </h3>
-                  <div className="flex items-center justify-center mt-2">
-                    {/* <Briefcase size={16} className="text-white mr-2" /> */}
-                    <p className="text-black text-sm">{lecturer.position}</p>
-                  </div>
-                </div>
+
+        {/* Modal for selected lecturer - Keeping this part unchanged */}
+        {selectedLecturer && (
+          <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4">
+            <div className="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+              <div className="flex justify-between items-center p-4 border-b">
+                <h2 className="text-2xl font-bold text-blue-700">
+                  {selectedLecturer.name}
+                </h2>
+                <button
+                  onClick={closeModal}
+                  className="text-gray-500 hover:text-gray-800"
+                >
+                  <X size={24} />
+                </button>
               </div>
-            ))}
-          </div>
 
-          {selectedLecturer && (
-            <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4">
-              <div className="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
-                <div className="flex justify-between items-center p-4 border-b">
-                  <h2 className="text-2xl font-bold text-blue-700">
-                    {selectedLecturer.name}
-                  </h2>
-                  <button
-                    onClick={closeModal}
-                    className="text-gray-500 hover:text-gray-800"
-                  >
-                    <X size={24} />
-                  </button>
-                </div>
+              <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="md:col-span-1">
+                  <img
+                    src={selectedLecturer.pic || "/api/placeholder/400/320"}
+                    alt={selectedLecturer.name}
+                    className="w-full rounded-lg"
+                  />
 
-                <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="md:col-span-1">
-                    <img
-                      src={selectedLecturer.pic || "/api/placeholder/400/320"}
-                      alt={selectedLecturer.name}
-                      className="w-full rounded-lg"
-                    />
+                  <div className="mt-4 space-y-3">
+                    <div className="flex items-center">
+                      <User size={18} className="text-blue-700 mr-2" />
+                      <p className="font-semibold">
+                        {selectedLecturer.position}
+                      </p>
+                    </div>
 
-                    <div className="mt-4 space-y-3">
-                      <div className="flex items-center">
-                        <User size={18} className="text-blue-700 mr-2" />
-                        <p className="font-semibold">
-                          {selectedLecturer.position}
+                    <div className="flex items-center">
+                      <Mail size={18} className="text-blue-700 mr-2" />
+                      <p className="text-sm">
+                        {selectedLecturer.contact?.split("|")[0]?.trim()}
+                      </p>
+                    </div>
+
+                    <div className="flex items-start mt-2">
+                      <Award size={18} className="text-blue-700 mr-2 mt-1" />
+                      <div>
+                        <p className="font-medium">Vision</p>
+                        <p className="text-sm italic">
+                          {selectedLecturer.vision}
                         </p>
-                      </div>
-
-                      <div className="flex items-center">
-                        <Mail size={18} className="text-blue-700 mr-2" />
-                        <p className="text-sm">
-                          {selectedLecturer.contact?.split("|")[0]?.trim()}
-                        </p>
-                      </div>
-
-                      <div className="flex items-start mt-2">
-                        <Award size={18} className="text-blue-700 mr-2 mt-1" />
-                        <div>
-                          <p className="font-medium">Vision</p>
-                          <p className="text-sm italic">
-                            {selectedLecturer.vision}
-                          </p>
-                        </div>
                       </div>
                     </div>
                   </div>
+                </div>
 
-                  <div className="md:col-span-2">
+                <div className="md:col-span-2">
+                  <div className="mb-6">
+                    <h3 className="text-lg font-semibold flex items-center mb-2">
+                      <User size={18} className="text-blue-700 mr-2" />
+                      Biography
+                    </h3>
+                    <p className="text-gray-700">{selectedLecturer.bio}</p>
+                  </div>
+
+                  <div className="mb-6">
+                    <h3 className="text-lg font-semibold flex items-center mb-2">
+                      <Award size={18} className="text-blue-700 mr-2" />
+                      Key Achievements
+                    </h3>
+                    <ul className="list-disc pl-6 text-gray-700">
+                      {selectedLecturer.key_achievements?.map(
+                        (achievement, index) => (
+                          <li key={index}>{achievement}</li>
+                        )
+                      )}
+                    </ul>
+                  </div>
+
+                  {selectedLecturer.education && (
                     <div className="mb-6">
                       <h3 className="text-lg font-semibold flex items-center mb-2">
-                        <User size={18} className="text-blue-700 mr-2" />
-                        Biography
-                      </h3>
-                      <p className="text-gray-700">{selectedLecturer.bio}</p>
-                    </div>
-
-                    <div className="mb-6">
-                      <h3 className="text-lg font-semibold flex items-center mb-2">
-                        <Award size={18} className="text-blue-700 mr-2" />
-                        Key Achievements
-                      </h3>
-                      <ul className="list-disc pl-6 text-gray-700">
-                        {selectedLecturer.key_achievements?.map(
-                          (achievement, index) => (
-                            <li key={index}>{achievement}</li>
-                          )
-                        )}
-                      </ul>
-                    </div>
-
-                    {selectedLecturer.education && (
-                      <div className="mb-6">
-                        <h3 className="text-lg font-semibold flex items-center mb-2">
-                          <BookOpen size={18} className="text-blue-700 mr-2" />
-                          Education
-                        </h3>
-                        <div className="space-y-2">
-                          {selectedLecturer.education.map((edu, index) => (
-                            <div
-                              key={index}
-                              className="border-l-2 border-blue-700 pl-3"
-                            >
-                              <p className="font-medium">{edu.institution}</p>
-                              <p className="text-sm text-gray-700">
-                                {edu.qualification}
-                              </p>
-                              <p className="text-sm text-gray-500">
-                                {edu.duration}
-                              </p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    <div className="mb-6">
-                      <h3 className="text-lg font-semibold flex items-center mb-2">
-                        <FileText size={18} className="text-blue-700 mr-2" />
-                        Publications
+                        <BookOpen size={18} className="text-blue-700 mr-2" />
+                        Education
                       </h3>
                       <div className="space-y-2">
-                        {selectedLecturer.publications?.journalArticles ? (
-                          // For Dr. Lar's structured publications
-                          <>
-                            <h4 className="font-medium">Journal Articles</h4>
-                            <ul className="list-disc pl-6 text-gray-700">
-                              {selectedLecturer.publications.journalArticles
-                                .slice(0, 3)
-                                .map((pub, index) => (
-                                  <li key={index} className="mb-1">
-                                    {pub.title}.{" "}
-                                    <span className="italic">
-                                      {pub.journal}
-                                    </span>
-                                    , {pub.year}
-                                  </li>
-                                ))}
-                            </ul>
+                        {selectedLecturer.education.map((edu, index) => (
+                          <div
+                            key={index}
+                            className="border-l-2 border-blue-700 pl-3"
+                          >
+                            <p className="font-medium">{edu.institution}</p>
+                            <p className="text-sm text-gray-700">
+                              {edu.qualification}
+                            </p>
+                            <p className="text-sm text-gray-500">
+                              {edu.duration}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
-                            {selectedLecturer.publications.booksAndChapters && (
-                              <>
-                                <h4 className="font-medium mt-3">
-                                  Books & Chapters
-                                </h4>
-                                <ul className="list-disc pl-6 text-gray-700">
-                                  {selectedLecturer.publications.booksAndChapters
-                                    .slice(0, 2)
-                                    .map((pub, index) => (
-                                      <li key={index} className="mb-1">
-                                        {pub.title}. In:{" "}
-                                        <span className="italic">
-                                          {pub.book}
-                                        </span>
-                                        , {pub.year}
-                                      </li>
-                                    ))}
-                                </ul>
-                              </>
-                            )}
-                          </>
-                        ) : (
-                          // For other lecturers' publications
+                  <div className="mb-6">
+                    <h3 className="text-lg font-semibold flex items-center mb-2">
+                      <FileText size={18} className="text-blue-700 mr-2" />
+                      Publications
+                    </h3>
+                    <div className="space-y-2">
+                      {selectedLecturer.publications?.journalArticles ? (
+                        <>
+                          <h4 className="font-medium">Journal Articles</h4>
                           <ul className="list-disc pl-6 text-gray-700">
-                            {selectedLecturer.publications
-                              ?.slice(0, 3)
+                            {selectedLecturer.publications.journalArticles
+                              .slice(0, 3)
                               .map((pub, index) => (
                                 <li key={index} className="mb-1">
                                   {pub.title}.{" "}
-                                  {pub.journal && (
-                                    <span className="italic">
-                                      {pub.journal}
-                                    </span>
-                                  )}
-                                  {pub.conference && (
-                                    <span className="italic">
-                                      {pub.conference}
-                                    </span>
-                                  )}
-                                  {pub.year && `, ${pub.year}`}
+                                  <span className="italic">{pub.journal}</span>,{" "}
+                                  {pub.year}
                                 </li>
                               ))}
                           </ul>
-                        )}
-                        <p className="text-sm text-blue-700 mt-2">
-                          {selectedLecturer.publications?.length > 3 &&
-                            "View all publications..."}
-                        </p>
-                      </div>
+
+                          {selectedLecturer.publications.booksAndChapters && (
+                            <>
+                              <h4 className="font-medium mt-3">
+                                Books & Chapters
+                              </h4>
+                              <ul className="list-disc pl-6 text-gray-700">
+                                {selectedLecturer.publications.booksAndChapters
+                                  .slice(0, 2)
+                                  .map((pub, index) => (
+                                    <li key={index} className="mb-1">
+                                      {pub.title}. In:{" "}
+                                      <span className="italic">{pub.book}</span>
+                                      , {pub.year}
+                                    </li>
+                                  ))}
+                              </ul>
+                            </>
+                          )}
+                        </>
+                      ) : (
+                        <ul className="list-disc pl-6 text-gray-700">
+                          {selectedLecturer.publications
+                            ?.slice(0, 3)
+                            .map((pub, index) => (
+                              <li key={index} className="mb-1">
+                                {pub.title}.{" "}
+                                {pub.journal && (
+                                  <span className="italic">{pub.journal}</span>
+                                )}
+                                {pub.conference && (
+                                  <span className="italic">
+                                    {pub.conference}
+                                  </span>
+                                )}
+                                {pub.year && `, ${pub.year}`}
+                              </li>
+                            ))}
+                        </ul>
+                      )}
+                      <p className="text-sm text-blue-700 mt-2">
+                        {selectedLecturer.publications?.length > 3 &&
+                          "View all publications..."}
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </section>
     </div>
   );
