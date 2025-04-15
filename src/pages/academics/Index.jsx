@@ -18,7 +18,10 @@ import Vice_Presido from "../../assets/images/vice.jpg";
 import Sec_Gen from "../../assets/images/secetary.jpg";
 import LarPic from "../../assets/images/Lar.jpg";
 import AbenePic from "../../assets/images//Abejs.jpg";
-import ZebulonPic from "../../assets/images//Abejs.jpg";
+import AlliPic from "../../assets/images/Gloria.jpg";
+import ZebulonPic from "../../assets/images/Zebe.jpg";
+import MaduguPic from "../../assets/images/Hod.jpg";
+
 import { useNavigate } from "react-router-dom";
 // import test from '../../../public/course upload'
 
@@ -84,6 +87,175 @@ export const Excos = [
 export const Lecturers = [
   {
     id: 1,
+    name: "Dr. Alexander Jang Madugu",
+    position:
+      "Head of Department, History and International Studies, University of Jos",
+    specialization: "Administration and Military History",
+    bio: "Dr. Alexander Jang Madugu is the current Head of the Department of History and International Studies at the University of Jos. His research interests center on administration, military history, internal peacekeeping operations, and the socio-political complexities of Nigeria. He has published extensively in peer-reviewed journals and contributed chapters to several academic books. Dr. Madugu is especially known for his work on the Nigerian military’s involvement in internal security, the political implications of ethnic conflict, and transnational dynamics across Africa. His commitment to critical scholarship has established him as a key voice in contemporary African historiography.",
+    pic: MaduguPic, // Replace with actual image
+    vision:
+      "To deepen understanding of African military and administrative systems and their relevance to contemporary peacekeeping and governance",
+    key_achievements: [
+      "Head of Department, History and International Studies, University of Jos",
+      "Prolific contributor to journals on military history, conflict, and governance",
+      "Key academic voice on internal peacekeeping operations in Plateau State"
+    ],
+    contact: "alexandermadugu@unijos.edu.ng | +234(0)XXXXXXXXXX", // Replace with actual contact
+    courses_taught: [
+      "The Nigerian Military in Internal Peacekeeping Operations",
+      "African Military History",
+      "Colonial Administration in Africa",
+      "Post-Colonial African States and Governance",
+      "Conflict and Security Studies"
+    ],
+    publications: [
+      {
+        title:
+          "Profiting from Piracy: Economic Rationality and Maritime Piracy in the Gulf of Aden",
+        journal: "SGI – Journal of Science and Humanities",
+        volume: "Vol. 5 (Special Edition)",
+        year: 2021,
+        publisher: "Scholars Gates International Journals, Plymouth University",
+        pages: "222–234"
+      },
+      {
+        title:
+          "Security, Conflict Resolution and Indigenous Pluralities in the Aftermath of Jos Crisis",
+        journal: "Verstehen (Journal of Social Research)",
+        volume: "Vol. 4 No. 1",
+        year: 2021,
+        co_authors: "Gilbert Yalmi",
+        pages: "35–50"
+      },
+      {
+        title:
+          "Militant Extremism and Boko Haram: Solidarity Beyond the Nigerian State",
+        journal: "Verstehen (Journal of Social Research)",
+        volume: "Vol. 4 No. 1",
+        year: 2021,
+        co_authors: "Gilbert Yalmi, Uzta Yusuf Abdullahi",
+        pages: "87–102"
+      },
+      {
+        title:
+          "The Effects of Corruption and Ethnicity in the Nigerian Societies",
+        journal: "Mandyeng (Journal of Central Nigeria Studies)",
+        year: 2019,
+        co_authors: "Gilbert Yalmi",
+        pages: "77–93"
+      },
+      {
+        title: "The Increasing Wave of Trans-Nationalism in Africa",
+        journal: "Kaduna Journal of Historical Studies",
+        year: 2019,
+        pages: "62–84"
+      },
+      {
+        title:
+          "Reconsideration of the September 2001 Crisis in Jos, the Transformation of the State and Deepening Alienation",
+        journal: "Mandyeng (Journal of Central Nigeria Studies)",
+        year: 2014,
+        co_authors: "Adoyi Onoja, Bernard Kangtau",
+        pages: "157–174"
+      },
+      {
+        title:
+          "Inequality, Security and the Threat of Multinational Corporation in Niger-Delta",
+        journal: "Mandyeng (Journal of Central Nigeria Studies)",
+        year: 2014,
+        co_authors: "Gloria Longba’am-Alli",
+        pages: "175–190"
+      },
+      {
+        title: "Culture and Gender Roles in Nigeria",
+        journal: "Journal of Studies in Humanities (JOSIH)",
+        volume: "Vol. 5 No. 2",
+        year: 2013,
+        pages: "143–156"
+      },
+      {
+        title: "Deregulation and the Nigerian Banking Sector",
+        journal: "Babcock Journal of Economics, Banking and Finance",
+        volume: "Vol. 1",
+        year: 2011,
+        pages: "68–76"
+      },
+      {
+        title:
+          "Strategies for the Improvement and Sustenance of Secondary Education in Nigeria",
+        journal: "Mandyeng (Journal of Central Nigeria Studies)",
+        year: 2010,
+        pages: "15–27"
+      },
+      {
+        title:
+          "Constitutional Democracy and the Plurality of Elites in Nigeria",
+        journal: "Jos Journal of Humanities",
+        volume: "Vol. 4 No. 1",
+        year: 2010,
+        pages: "149–160"
+      },
+      {
+        title: "Understanding Terror: An Argument for Terrorism",
+        journal: "Ebonyi Journal of History",
+        volume: "Vol. 2 No. 1",
+        status: "Accepted"
+      },
+      {
+        title:
+          "[Re] peripheralization, [Re] incorporation, Frontiers and Non-State Societies: Depictions of Terrorism in American (Hollywood) Movies",
+        journal: "Ebonyi Journal of History",
+        volume: "Vol. 2 No. 1",
+        status: "Accepted"
+      },
+      {
+        title:
+          "Embeddedness: Rediscovering Africa in the Mirror of Security and Cultural Others",
+        book: "Perspectives in History, Development and International Relations (Festschrift for Professor Ibrahim James)",
+        editors: "Dr. Tendehba Wuam & Philibus Audu Nwamagyi",
+        publisher: "University Press, Kaduna",
+        year: 2018,
+        pages: "219–237"
+      },
+      {
+        title:
+          "Postcolonial Nigeria: Socio-Political Stability and the Need for New Social Order in Nigeria",
+        book: "Popular Ideologies, Modernity, and the National Question in Nigeria (Festschrift for Prof. Monday Y. Mangvwat)",
+        editors:
+          "S. U. Fwatshak, Okpeh O. Okpeh Jnr, J. M. Ayuba & J. E. Agaba",
+        publisher: "University of Jos Press",
+        year: 2018,
+        pages: "317–329"
+      },
+      {
+        title:
+          "Policing in Post-Conflict Jos Metropolis: A Theoretical Discourse",
+        book: "Transformation of Central Nigeria (Essays in Honor of Professor Toyin Falola)",
+        editor: "Prof. S. U. Fwatshak",
+        publisher: "Pan African University Press, Austin",
+        year: 2016,
+        pages: "451–462"
+      },
+      {
+        title:
+          "Resistance to British Colonial Conquest: A Survey of the Central Jos Plateau, 1903–1930",
+        book: "Essays in Honour of Professor John Garah Nengel",
+        editors: "Okpeh O. Okpeh Jr, Kudu A. Amango, Maiyaki M. Mejida",
+        co_authors: "Sale Akila Lohor",
+        publisher: "Integrity Publishers, Lagos",
+        year: 2019,
+        pages: "165–181"
+      },
+      {
+        title:
+          "The Establishment of Trade Relations Between the Hausa and the Chadic Speakers of Jos Plateau: 1700–1800",
+        co_authors: "Sale Akila Lohor",
+        status: "Accepted for publication"
+      }
+    ]
+  },
+  {
+    id: 2,
     name: "Dr. Jimam Timchang Lar",
     position: "Reader (Associate Professor)",
     bio: `
@@ -221,7 +393,7 @@ export const Lecturers = [
     }
   },
   {
-    id: 2,
+    id: 3,
     name: "Mrs. Abene Nanyen Margaret",
     position: "Lecturer",
     bio: `
@@ -291,7 +463,7 @@ export const Lecturers = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     name: "Mr. Godslove Zebulon",
     position: "Lecturer",
     bio: `
@@ -351,6 +523,89 @@ export const Lecturers = [
         conference:
           "Faculty of Management Sciences International Conference, Al-Hikmah University",
         year: 2023
+      }
+    ]
+  },
+  {
+    id: 5,
+    name: "Dr. Gloria Longba’am-Alli",
+    position: "Lecturer",
+    bio:
+      "Dr. Gloria Longba’am-Alli is currently a faculty member at the University of Jos, where she teaches courses on revolutions, gender studies, and African security dynamics. She integrates her extensive fieldwork experience and commitment to fostering peace and stability across Africa into her teaching. Her scholarly contributions, including numerous articles and book chapters, have significantly advanced knowledge in her field.\n\n" +
+      "She obtained her B.A. Hons. and M.A. Hons. degrees from the University of Jos before pursuing her doctoral studies at Makerere University. Dr. Alli has received several prestigious awards, including the Gerda Henkel Stiftung Fellowship for her PhD, the 2022 SSRC Dissertation Completion Fellowship, the 2023 SSRC Post-Doctoral Writing Fellowship, and the 2024 African Peace Network Fellowship.",
+    pic: AlliPic, // Replace with actual image
+    vision:
+      "Promoting interdisciplinary peacebuilding and gender equity in African security contexts",
+    key_achievements: [
+      "Gerda Henkel Stiftung PhD Fellowship",
+      "2022 SSRC Dissertation Completion Fellowship",
+      "2023 SSRC Post-Doctoral Writing Fellowship",
+      "2024 SSRC African Peace Network Fellowship",
+      "Lecturer in Revolutions, Gender, and African Security"
+    ],
+    contact: "gloriaalli@unijos.edu.ng | +234(0)XXXXXXXXXX", // Replace with actual contact
+    courses_taught: [
+      "The Military in the History of 20th Century Africa",
+      "History of Southern Africa",
+      "Europe from the French Revolution to the First World War",
+      "History of Christianity in Africa",
+      "Pre-colonial Warfare in Africa",
+      "War & Peace",
+      "War & Peace II, 1945 to the Present",
+      "Gender and Development in Africa",
+      "Major World Revolutions in the 20th Century"
+    ],
+    publications: [
+      {
+        title:
+          "The Impact of Non-Violent Protests in Nigeria and Sudan: The Struggle for Democracy in Africa",
+        journal: "African Social Research",
+        volume: "Vol. 2",
+        year: 2022,
+        link: "https://www.pasiri.org/_files/ugd/d71c2d_cb54eed64f204d1893da620dc998d35c.pdf"
+      },
+      {
+        title:
+          "Everyday Peace: Historicising Local Agency in Managing Ethno-Religious Conflicts in Nigeria’s Middle Belt",
+        journal: "The Journal of Social Encounters",
+        volume: "Vol. 6, Iss. 1",
+        year: 2022,
+        link: "https://digitalcommons.csbsju.edu/social_encounters/vol6/iss1/2"
+      },
+      {
+        title:
+          "Inequality and Security and the Threat of Multinational Corporations in the Niger-Delta",
+        journal: "MANDIYENG, Journal of Central Nigeria Studies",
+        year: 2014,
+        co_authors: "Alex J. Madugu"
+      },
+      {
+        title: "Culture and Gender Roles in Nigeria",
+        journal: "JOSIH, Journal of Studies in Humanities",
+        year: 2013,
+        co_authors: "Alex J. Madugu"
+      },
+      {
+        title:
+          "Transcending Gender Roles in the Provision of Security: Women in Berom Area, 2001–2012",
+        book: "Essays in Honour of O.D. Akinwunmi",
+        publisher: "Eiwa Press Nigeria Limited",
+        year: 2017,
+        co_authors: "Adoyi Onoja, Nanyen M. Abene"
+      },
+      {
+        title:
+          "Women and Informal Sector Markets in the Aftermath of the Twenty-First Century Jos Conflicts",
+        book: "Transformation of Central Nigeria: Essays in Honour of Professor Toyin Falola",
+        publisher: "Pan African University Press, Austin",
+        year: 2016
+      },
+      {
+        title: "Women and War Stories from Captivity in Nigeria and Uganda",
+        conference:
+          "Oral Traditions and Written Histories – Special Conference in Honour of Professor Bolanle Awe at 90",
+        year: 2023,
+        co_authors: "Dr Charlotte Mafumbo Karungi"
       }
     ]
   }
@@ -632,6 +887,9 @@ const Academics = () => {
           </h2>
 
           {/* Excos Section */}
+          <h2 className="font-extrabold text-3xl lg:text-5xl mb-8">
+            Our Excos
+          </h2>
           <div className="mb-16">
             <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-6 lg:gap-x-8 md:grid-cols-3">
               {Excos.map((exco) => (
@@ -659,6 +917,9 @@ const Academics = () => {
           </div>
 
           {/* Lecturers Section */}
+          <h2 className="font-extrabold text-3xl lg:text-5xl mb-8">
+            Our Lecturers
+          </h2>
           <div className="mt-12">
             <div className="grid grid-cols-2 gap-4 md:gap-6 md:grid-cols-3">
               {Lecturers.map((lecturer) => (

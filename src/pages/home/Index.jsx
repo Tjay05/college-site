@@ -10,7 +10,7 @@ import Afro_Guy from "../../assets/images/afro-guy.png";
 import ResourceGroup from "../../assets/images/students 2.jpg";
 import ResourceGroup2 from "../../assets/images/students 3.jpg";
 import ResourceGroup3 from "../../assets/images/student 4.jpg";
-import CommunityGuy from "../../assets/images/community-guy.png";
+import CommunityGuy from "../../assets/images/community.jpg";
 import Curriculum from "../../assets/icons/structured-curriculum.svg";
 import Faculty from "../../assets/icons/dedicated-support.svg";
 import Community from "../../assets/icons/engaging-community.svg";
@@ -241,37 +241,41 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section id="community" className="rule font-[Inter] text-center">
-          <h2 className="text-black font-extrabold text-3xl lg:text-5xl">
-            What Our Community Are Saying
-          </h2>
-          <p className="text-[#00000080] my-3 font-medium lg:text-lg">
-            Your academic and professional growth is our topmost priority!
-          </p>
-          <div className="my-12 shadow-lg p-4 rounded-3xl md:flex md:gap-12 md:px-8 md:py-6 md:my-24 lg:gap-18 lg:px-24 lg:py-12 relative bg-[#41A94EE5] z-90 lg:my-36">
-            {/* Rotated BG */}
-            <div className="absolute inset-0 bg-[#fff] w-full rotate-1 -z-1 rounded-3xl shadow-lg"></div>
-            <img
-              src={CommunityGuy}
-              alt="Student"
-              className="w-full sm:h-[300px] object-contain lg:w-[25%]"
-            />
-            <div className="my-2 lg:w-[55%] lg:text-left">
-              <h3 className="font-extrabold my-3 text-xl lg:text-3xl">
-                Transformative Learning Experiences
-              </h3>
-              <p className="font-medium lg:text-lg lg:my-4">
-                "This college department has redefined my academic journey. With
-                structured programs and abundant resources, I feel empowered to
-                excel. The collaborative community has fostered invaluable
-                discussions and connections!"
-              </p>
-              <p className="font-medium my-4 lg:text-lg">
-                - Shammah Goshit, <span className="font-bold">Student</span>
-              </p>
-            </div>
-          </div>
-        </section>
+         <section id="community" className="rule font-[Inter] text-center">
+           <h2 className="text-black font-extrabold text-3xl lg:text-5xl">
+             What Our Community Are Saying
+           </h2>
+           <p className="text-[#00000080] my-3 font-medium lg:text-lg">
+             Your academic and professional growth is our topmost priority!
+           </p>
+           <div className="my-12 shadow-lg p-4 rounded-3xl md:flex md:gap-12 md:px-8 md:py-6 md:my-24 lg:gap-18 lg:px-24 lg:py-12 relative bg-[#41A94EE5] z-90 lg:my-36">
+             {/* Rotated BG */}
+             <div className="absolute inset-0 bg-[#fff] w-full rotate-1 -z-1 rounded-3xl shadow-lg"></div>
+             <img
+               src={CommunityGuy}
+               alt="Student"
+               className="w-full sm:h-[300px] object-contain lg:w-[25%]"
+             />
+             <div className="my-2 lg:w-[55%] lg:text-left">
+               <h3 className="font-extrabold my-3 text-xl lg:text-3xl">
+                 Transformative Learning Experiences
+               </h3>
+               <p className="font-medium lg:text-lg lg:my-4">
+                 " Today, looking back from where it all started in 100l to my
+                 final year; I see a shaping process, a making process,an exposure
+                 to a department and community that simplifies the world's
+                 multifaceted realities, socio-economic and political trends from a
+                 historical stand point. This is a place where world class leaders
+                 are emerging from."
+               </p>
+               <p className="font-medium my-4 lg:text-lg">
+                 ~ Lucky Joseph,
+                 <span className="font-bold">Student</span>
+               </p>
+             </div>
+           </div>
+         </section>
+   
         {/* <section className="rule font-[Inter] border border-black p-6 my-16 rounded-4xl bg-white md:flex items-stretch md:my-28 md:p-8 md:gap-8">
           <div className="bg-[#41A94E] text-white p-5 rounded-2xl mb-4 md:w-[40%]">
             <p className="uppercase font-semibold text-lg md:text-xl">Connect with us</p>

@@ -1,11 +1,11 @@
-import SmilyGuy from "../../assets/images/about-us-guy.png";
+import SmilyGuy from "../../assets/images/Hod.jpg";
 import Department_Pic from "../../assets/images/department.png";
-import Bg3br from '../../assets/images/bg3-br.png';
-import Bg3_tl from '../../assets/images/bg3-tl.png';
-import CommunityGuy from '../../assets/images/community-guy.png';
-import map_Pointer from '../../assets/icons/location.svg';
-import mail_icon from '../../assets/icons/email.svg';
-import phone_icon from '../../assets/icons/call.svg';
+import Bg3br from "../../assets/images/bg3-br.png";
+import Bg3_tl from "../../assets/images/bg3-tl.png";
+import CommunityGuy from "../../assets/images/community.jpg";
+import map_Pointer from "../../assets/icons/location.svg";
+import mail_icon from "../../assets/icons/email.svg";
+import phone_icon from "../../assets/icons/call.svg";
 
 const About = () => {
   return (
@@ -29,19 +29,27 @@ const About = () => {
                 HOD's Profile
               </h2>
               <p className="font-medium text-lg md:text-2xl">
-                Lorem ipsum dolor sit amet consectetur. Tincidunt nibh massa
-                tristique pharetra egestas. Pharetra dictum dapibus ante
-                dignissim aliquet. In nibh neque est amet. A mi ultricies
-                consectetur sit nulla lectus amet est. <br />
+                Dr. Alexander Jang Madugu is the Head of the Department of
+                History and International Studies at the University of Jos. His
+                area of specialization includes Administration and Military
+                History, with particular focus on the Nigerian military's role
+                in internal peacekeeping operations — notably in Plateau State
+                between 2001 and 2011.
                 <br />
-                Lorem ipsum dolor sit amet consectetur. Tincidunt nibh massa
-                tristique pharetra egestas. Pharetra dictum dapibus ante
-                dignissim aliquet. In nibh neque est amet. A mi ultricies
-                consectetur sit nulla lectus amet est.
-                <br /> <br />
-                Lorem ipsum dolor sit amet consectetur. Tincidunt nibh massa
-                tristique pharetra egestas. Pharetra dictum dapibus ante
-                dignissim aliquet.
+                <br />
+                Over the years, Dr. Madugu has contributed immensely to
+                scholarship with a range of peer-reviewed journal articles,
+                including works on piracy in the Gulf of Aden, the
+                socio-political effects of corruption and ethnicity in Nigeria,
+                and the security challenges in the post-crisis Jos metropolis.
+                <br />
+                <br />
+                He has also co-authored insightful chapters in numerous books,
+                addressing issues of postcolonial statecraft, indigenous
+                pluralities, terrorism, and historical resistance to colonial
+                conquest. His academic footprint reflects a dedication to both
+                historical inquiry and contemporary relevance in understanding
+                Nigeria's evolving security and administrative challenges.
               </p>
             </div>
           </div>
@@ -99,16 +107,16 @@ const About = () => {
           colonialism, nationalism, governance, and socio-economic
           transformations. In 2005, the department underwent a significant
           transition when it was accredited for a change in degree nomenclature
-          from B.A. History to B.A. History and International Studies.
-          This modification was aimed at aligning the department’s academic
-          focus with contemporary global trends in historical studies. The
-          change was approved by the Senate of the University of Jos and the
-          National Universities Commission (NUC). The revised degree structure
-          sought to integrate international studies with history, thereby
-          broadening the scope of academic inquiry and preparing students for
-          careers in diplomacy, international relations, research, and academia.
-          This change ensured that graduates of the department would be equipped
-          with a more versatile knowledge base, making them competitive in an
+          from B.A. History to B.A. History and International Studies. This
+          modification was aimed at aligning the department’s academic focus
+          with contemporary global trends in historical studies. The change was
+          approved by the Senate of the University of Jos and the National
+          Universities Commission (NUC). The revised degree structure sought to
+          integrate international studies with history, thereby broadening the
+          scope of academic inquiry and preparing students for careers in
+          diplomacy, international relations, research, and academia. This
+          change ensured that graduates of the department would be equipped with
+          a more versatile knowledge base, making them competitive in an
           increasingly interconnected world. Further academic revisions followed
           in 2014 when the University Senate approved a new curriculum for the
           department. The department, recognizing the need to remain relevant in
@@ -177,9 +185,9 @@ const About = () => {
               transformations.
             </li>
             <li className="ml-4">
-              International Relations and Diplomacy – Focuses on the
-              principles of diplomacy, foreign policy analysis, and
-              international cooperation.
+              International Relations and Diplomacy – Focuses on the principles
+              of diplomacy, foreign policy analysis, and international
+              cooperation.
             </li>
             <li className="ml-4">
               Historiography and Historical Methods – Introduces students to
@@ -187,9 +195,9 @@ const About = () => {
               historical sources.
             </li>
             <li className="ml-4">
-              Nigerian History – Covers the historical development of
-              Nigeria from ancient civilizations to contemporary political and
-              social dynamics.
+              Nigerian History – Covers the historical development of Nigeria
+              from ancient civilizations to contemporary political and social
+              dynamics.
             </li>
             <li className="ml-4">
               Global Conflicts and Resolutions – Analyzes major global
@@ -295,13 +303,16 @@ const About = () => {
               Transformative Learning Experiences
             </h3>
             <p className="font-medium lg:text-lg lg:my-4">
-              "This college department has redefined my academic journey. With
-              structured programs and abundant resources, I feel empowered to
-              excel. The collaborative community has fostered invaluable
-              discussions and connections!"
+              " Today, looking back from where it all started in 100l to my
+              final year; I see a shaping process, a making process,an exposure
+              to a department and community that simplifies the world's
+              multifaceted realities, socio-economic and political trends from a
+              historical stand point. This is a place where world class leaders
+              are emerging from."
             </p>
             <p className="font-medium my-4 lg:text-lg">
-              - Shammah Goshit, <span className="font-bold">Student</span>
+              ~ Lucky Joseph,
+              <span className="font-bold">Student</span>
             </p>
           </div>
         </div>
@@ -395,6 +406,6 @@ const About = () => {
       </section> */}
     </div>
   );
-}
- 
+};
+
 export default About;
