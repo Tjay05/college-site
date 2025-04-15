@@ -6,7 +6,7 @@ import confetti from '../../assets/images/confetti.png';
 
 const Community = () => {
   return (
-    <div className="relative font-[Inter]">
+    <div className="relative font-[Inter] mt-11">
       <h1 className="absolute top-[-11rem] z-10 left-[-3rem] md:text-[11.5rem] xl:text-[16rem] font-bold text-[#0000001A] opacity-100 select-none w-full">
         Community
       </h1>

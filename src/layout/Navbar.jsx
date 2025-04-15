@@ -38,7 +38,7 @@ const Navbar = () => {
     !location.pathname.includes("Profile");
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50">
+    <div className="fixed top-0 left-0 right-0 z-50 mb-4 ">
       <nav className="bg-[#1E1E1E] relative">
         <div className="flex justify-between items-center rule py-3 md:py-2">
           <p className="text-[#41A94E] font-[Inter] font-semibold text-xl md:text-2xl">

@@ -747,7 +747,7 @@ const Academics = () => {
   };
 
   return (
-    <div className="relative font-[Inter]">
+    <div className="relative font-[Inter] mt-11 ">
       <h1 className="absolute top-[-11rem] z-10 left-[-4rem] md:text-[11.5rem] xl:text-[16rem] font-bold text-[#0000001A] opacity-100 select-none w-full">
         Academics
       </h1>

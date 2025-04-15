@@ -29,7 +29,7 @@ const Home = () => {
   const { isModalOpen, isLoginModalOpen } = useContext(ModalContext);
 
   return (
-    <div className="relative">
+    <div className="relative mt-11 ">
       <div className="relative ">
         <header
           className={`bg-[#41A94EE5] relative w-full py-4 lg:py-16`}
