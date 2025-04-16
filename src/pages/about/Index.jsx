@@ -296,7 +296,7 @@ const About = () => {
           <img
             src={CommunityGuy}
             alt="Student"
-            className="w-full sm:h-[300px] object-contain lg:w-[25%]"
+            className="w-full h-[300px] sm:h-[300px] object-contain lg:w-[25%]"
           />
           <div className="my-2 lg:w-[55%] lg:text-left">
             <h3 className="font-extrabold my-3 text-xl lg:text-3xl">
