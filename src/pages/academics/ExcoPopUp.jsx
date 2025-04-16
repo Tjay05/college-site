@@ -6,7 +6,7 @@ const ExcoModal = () => {
   const exco = Object.values(Excos).find((e) => e.id === parseInt(id));
 
   return (
-    <div className="relative font-[Inter] mt-11">
+    <div className="relative font-[Inter] mt-[150px] ">
       <div className="rule my-8 lg:my-16">
         <div className="my-8 md:flex md:gap-12 items-center md:my-12">
           <img
