@@ -4,7 +4,7 @@ import CourseMaterials from '../../assets/images/past-questions.png';
 import Kemi from '../../assets/images/kemi.png';
 import Abdul from '../../assets/images/abdul.png';
 import Ebuka from '../../assets/images/prof.png';
-import CommunityGuy from '../../assets/images/community-guy.png';
+import CommunityGuy from '../../assets/images/community.jpg';
 import News_Pic from '../../assets/images/news.png';
 import File_Icon from '../../assets/icons/dark_file.svg';
 import Star from '../../assets/icons/star.svg';
@@ -135,40 +135,32 @@ const Research_Project = () => {
         <h2 className="font-extrabold text-center text-3xl text-[#41A94E] md:text-5xl lg:text-6xl">
           Alumni & Success Stories
         </h2>
-        <div className="my-8 shadow-lg p-6 rounded-3xl md:flex-col md:gap-12 md:px-8 md:py-6 lg:gap-18 lg:px-16 lg:py-12 relative bg-[#41A94EE5] z-90 lg:my-12">
-          {/* Rotated BG */}
-          <div className="absolute inset-0 bg-[#fff] w-full rotate-1 -z-1 rounded-3xl shadow-lg"></div>
-          <div className="md:flex items-center gap-16 md:w-[90%] mx-auto md:mb-12">
-            <img
-              src={CommunityGuy}
-              alt="Student"
-              className="w-full h-[250px] object-cover rounded-3xl md:w-[20%] md:h-fit"
-            />
-            <div className="text-black text-xl my-4 md:text-5xl">
-              <p className="font-medium">Damson Idris</p>
-              <span className="font-bold">Alumni 2017/2018</span>
+            <div className="my-12 shadow-lg p-4 rounded-3xl md:flex md:gap-12 md:px-8 md:py-6 md:my-24 lg:gap-18 lg:px-24 lg:py-12 relative bg-[#41A94EE5] z-30 lg:my-36">
+              {/* Rotated BG */}
+              <div className="absolute inset-0 bg-[#fff] w-full rotate-1 -z-1 rounded-3xl shadow-lg"></div>
+              <img
+                src={CommunityGuy}
+                alt="Student"
+                className="w-full h-[300px] sm:h-[300px] object-contain lg:w-[25%]"
+              />
+              <div className="my-2 lg:w-[55%] lg:text-left">
+                <h3 className="font-extrabold my-3 text-xl lg:text-3xl">
+                  Transformative Learning Experiences
+                </h3>
+                <p className="font-medium lg:text-lg lg:my-4">
+                  " Today, looking back from where it all started in 100l to my
+                  final year; I see a shaping process, a making process,an exposure
+                  to a department and community that simplifies the world's
+                  multifaceted realities, socio-economic and political trends from a
+                  historical stand point. This is a place where world class leaders
+                  are emerging from."
+                </p>
+                <p className="font-medium my-4 lg:text-lg">
+                  ~ Lucky Joseph,
+                  <span className="font-bold">Student</span>
+                </p>
+              </div>
             </div>
-          </div>
-          <p className="font-medium text-sm lg:text-lg lg:my-4">
-            "This college department has redefined my academic journey. With
-            structured programs and abundant resources, I feel empowered to
-            excel. The collaborative community has fostered invaluable
-            discussions and connections!" Lorem ipsum dolor sit amet
-            consectetur. Tincidunt nibh massa tristique pharetra egestas.
-            Pharetra dictum dapibus ante dignissim aliquet. In nibh neque est
-            amet. A mi ultricies consectetur sit nulla lectus amet est. Lorem
-            ipsum dolor sit amet consectetur. Tincidunt nibh massa tristique
-            pharetra egestas. Pharetra dictum dapibus ante dignissim aliquet. In
-            nibh neque est amet. A mi ultricies consectetur sit nulla lectus
-            amet est.Lorem ipsum dolor sit amet consectetur. Tincidunt nibh
-            massa tristique pharetra egestas. Pharetra dictum dapibus ante
-            dignissim aliquet. In nibh neque est amet. A mi ultricies
-            consectetur sit nulla lectus amet est.Lorem ipsum dolor sit amet
-            consectetur. Tincidunt nibh massa tristique pharetra egestas.
-            Pharetra dictum dapibus ante dignissim aliquet. In nibh neque est
-            amet. A mi ultricies consectetur sit nulla lectus amet est.
-          </p>
-        </div>
       </section>
       <section className="rule section_spacer">
         <header

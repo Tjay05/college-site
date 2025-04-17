@@ -1,8 +1,8 @@
-import News_Pic from '../../assets/images/news.png';
-import Vc_Pic from '../../assets/images/students 5.jpg';
-import Bg3br from '../../assets/images/bg3-br.png';
-import Bg3_tl from '../../assets/images/bg3-tl.png';
-import confetti from '../../assets/images/confetti.png';
+import News_Pic from "../../assets/images/news.png";
+import Vc_Pic from "../../assets/images/students 5.jpg";
+import Bg3br from "../../assets/images/bg3-br.png";
+import Bg3_tl from "../../assets/images/bg3-tl.png";
+import confetti from "../../assets/images/confetti.png";
 
 const Community = () => {
   return (
@@ -72,7 +72,7 @@ const Community = () => {
           </p>
         </article>
       </section>
-      <section id="news" className="rule section_spacer">
+      {/* <section id="news" className="rule section_spacer">
         <h2 className="font-bold text-[#41A94E] text-3xl md:text-5xl">News</h2>
         <div className="font-medium">
           <p className="border-b py-2 md:py-4 md:text-2xl">
@@ -84,7 +84,7 @@ const Community = () => {
             pharetra egestas.
           </p>
         </div>
-      </section>
+      </section> */}
       <section
         className="bg-[#41A94E] relative section_spacer py-8"
         style={{
@@ -98,24 +98,24 @@ const Community = () => {
         <div className="rule text-white font-[Inter] text-center lg:text-left relative">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <h2 className="font-extrabold text-3xl lg:text-8xl lg:w-[45%]">
-              Events & Calenders
+              Launch & Updates
             </h2>
             <div
               style={{ backgroundImage: `url(${confetti})` }}
               className="bg-white p-4 rounded-3xl my-6 text-center bg-cover md:bg-center bg-no-repeat relative overflow-hidden md:p-12"
             >
               <p className="text-[#41A94EE5] font-bold text-2xl md:text-6xl my-1 lg:my-2">
-                Matriculation
+                We're Going Live!
               </p>
               <p className="font-semibold text-black text-lg md:text-2xl">
-                12th March, Wednesday
+                Today, 17th April
               </p>
-              <span className="text-black md:text-xl">10:00 AM</span>
+              <span className="text-black md:text-xl">4:00 PM</span>
             </div>
           </div>
           <p className="bg-white place-self-center text-black p-2 rounded-xl text-sm md:text-3xl md:px-4 my-4 shadow-2xl">
-            <span className="font-extrabold">Next Up</span> V.C Cup on 16th July
-            starting on monday
+            <span className="font-extrabold">Next Up</span> Dev AMA Session
+            tomorrow at 1:00 PM
           </p>
         </div>
       </section>
@@ -131,14 +131,21 @@ const Community = () => {
             <h2 className="font-extrabold text-3xl my-2 text-center md:text-left md:my-4 md:text-5xl">
               Want to be part of the discussion Join our Whatsapp Group
             </h2>
-            <button className="bg-white px-2 py-1 rounded-4xl font-semibold text-black place-self-center md:my-4 md:px-8 cursor-pointer md:py-2 md:text-2xl md:place-self-start">
-              Join Now
-            </button>
+            <a
+              className="m-auto"
+              href="https://chat.whatsapp.com/FlsipWqai6q2Vf9Nl76PYF"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="bg-white px-2 py-1 rounded-4xl font-semibold text-black place-self-center md:my-4 md:px-8 cursor-pointer md:py-2 md:text-2xl md:place-self-start">
+                Join Now
+              </button>
+            </a>
           </div>
         </header>
       </section>
     </div>
   );
-}
- 
+};
+
 export default Community;

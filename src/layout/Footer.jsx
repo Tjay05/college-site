@@ -31,7 +31,7 @@ const Footer = () => {
             <li className="my-2 opacity-85"><a href="#vision">Vision & Mission</a></li>
             <li className="my-2 opacity-85"><a href="#department">Department Overview</a></li>
           </ul>
-          <ul className="">
+          {/* <ul className="">
             <li className="my-3 font-bold text-xl"><a href="/Academics">Academics</a></li>
             <li className="my-2 opacity-85">Lecturer Profiles</li>
             <li className="my-2 opacity-85"><a href="#excos">Student Executives</a></li>
@@ -44,7 +44,7 @@ const Footer = () => {
             <li className="my-2 opacity-85"><a href="#discussion">Discussion Forum</a></li>
             <li className="my-2 opacity-85"><a href="#news">News Alerts</a></li>
             <li className="my-2 opacity-85"><a href="#events">Event Calendars</a></li>
-          </ul>
+          </ul> */}
         </div>
       </div>
       <p className="py-6 text-center text-white text-sm font-[Inter]">Designed By Olamide Afolabi</p>
